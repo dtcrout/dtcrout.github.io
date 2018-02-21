@@ -13,13 +13,14 @@ locale                   : "en-US"
 title                    : "Darshan Crout"
 title_separator          : "-"
 name                     : "Darshan Crout"
-description              : "The personal blog of Darshan Crout"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+description              : "The personal blog of Darshan Crout."
+url                      : "https://dtcrout.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "dtcrout/dtcrout.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
+# TODO: Add a comment provider
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
@@ -82,6 +83,7 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
+# TODO: Add site analytics
 # Analytics
 analytics:
   provider               : false # false (default), "google", "google-universal", "custom"
@@ -93,24 +95,24 @@ analytics:
 author:
   name             : "Darshan Crout"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Data scientist, tech enthusiast and amateur music nerd."
+  bio              : "Data scientist, physicist in a previous life, music nerd."
   location         : "Toronto, ON"
   email            :
   uri              :
-  home             : # null (default), "absolute or relative url to link to author home"
+  home             : "https://dtcrout.github.io"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "dtcrout"
   gitlab           :
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "darshancrout"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
