@@ -4,24 +4,15 @@ title: About
 permalink: /about/
 ---
 
-My background is in physics and applied mathematics. I have a BSc in Physics
-and now I'm pursuing a MSc in Computer Science at Simon Fraser University
-in the [Professional Master's Program in Big Data](https://www.sfu.ca/bigdata).
-I currently reside in Toronto working as a full-time data scientist at Scotiabank.
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
-I'm a big fan of knowing [what other people use](https://usesthis.com/)
-to get work done. Here's my current setup:
+You can find the source code for Minima at GitHub:
+[jekyll][jekyll-organization] /
+[minima](https://github.com/jekyll/minima)
 
-* Lenovo Thinkpad x220
-* Ubuntu 16.04 LTS with [i3wm](https://i3wm.org/)
-* [Happy Hacking Keyboard](https://en.wikipedia.org/wiki/Happy_Hacking_Keyboard)
+You can find the source code for Jekyll at GitHub:
+[jekyll][jekyll-organization] /
+[jekyll](https://github.com/jekyll/jekyll)
 
-Here are some things I grok:
 
-* Linux
-* Emacs
-* Tiling window managers
-* Mechanical keyboards
-* [Vimium](https://vimium.github.io/)
-
-My dotfiles can be found on [GitHub](https://github.com/dtcrout/dotfiles).
+[jekyll-organization]: https://github.com/jekyll
