@@ -2,6 +2,7 @@
 permalink: /about/
 layout: single
 title:  "About"
+author_profile: true
 ---
 
 I'm currently a data scientist at Scotiabank based in Toronto, Ontario. I have
