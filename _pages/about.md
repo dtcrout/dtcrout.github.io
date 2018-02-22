@@ -4,13 +4,18 @@ layout: single
 title:  "About"
 ---
 
-Hello and welcome to my personal site. I'm currently a data scientist at Scotiabank,
-living in Toronto ON. I currently hold a Master's of Science in Computer Science and
-a Bachelor's of Science in Physics.
+I'm currently a data scientist at Scotiabank based in Toronto, Ontario. I have
+a MSc in Computer Science and BSc in Physics.
 
-During my undergrad, I did a couple of NERC funded projects in mathematical models
-for aggregation, mainly [collective behaviour of biological aggregation]() and
-[opinion dynamics](). I then got interested in the field of big data problems,
-which then led me to the field of machine learning. Naturally loving problem
-solving, I enrolled in the Professional Master's in Big Data program at
-Simon Fraser Univeristy.
+During my undergrad, I got involved in mathematical models for biological aggregation
+and opinion dynamics in which I solved differential equations using Monte Carlo methods.
+This got me interested in big data problems, then later to the field of machine learning.
+Naturally loving math and problem solving, I enrolled in the [Professional Master's Program in Big Data](https://www.sfu.ca/bigdata)
+at Simon Fraser University. There I gained [the skills necessary](https://vimeo.com/191054268)
+to pursue a career in data science.
+
+Here are some things I also grok:
+* Music
+* DIY
+* Linux and Emacs
+* Mechanical Keyboards
