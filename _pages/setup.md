@@ -22,4 +22,4 @@ switches. It's portable and extremely pleasant to type on (and listen to).
 The layout differs from traditional keyboards as the escape and backspace keys are
 shifted one row down. The control keys are also removed from their usual position.
 Instead the caps lock key is remapped as a control key. This makes the keyboard
-ergonomic and Emacs keyboard bindings not a one-way ticket RSI-city.
+ergonomic and Emacs keyboard bindings not a one-way ticket to RSI-city.
