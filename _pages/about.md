@@ -14,7 +14,7 @@ Naturally loving math and problem solving, I enrolled in the [Professional Maste
 at Simon Fraser University. There I gained [the skills necessary](https://vimeo.com/191054268)
 to pursue a career in data science.
 
-Here are some things I also grok:
+Here are more things I grok:
 * Music
 * DIY
 * Linux and Emacs
