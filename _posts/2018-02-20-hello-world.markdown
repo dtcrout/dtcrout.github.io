@@ -6,6 +6,7 @@ categories: jekyll
 ---
 
 Welcome to my personal site! This site will be used to discuss things that interest me.
+While you're here, [get to know me](/_site/pages/about.md) and check out my [personal setup](/_site/setup.md)!
 
 This site was created using [Jekyll](https://jekyllrb.com/) with the
 [Minimal Mistakes Theme](https://mmistakes.github.io/minimal-mistakes/).
