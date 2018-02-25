@@ -10,7 +10,7 @@ minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "da
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Darshan Crout"
+title                    : "/dev/null"
 title_separator          : "-"
 name                     : "Darshan Crout"
 description              : "The personal blog of Darshan Crout."
@@ -95,11 +95,11 @@ analytics:
 author:
   name             : "Darshan Crout"
   avatar           : "/assets/images/avatar.png"
-  bio              : "Data scientist, physicist in a previous life, music nerd."
+  bio              : "Data scientist, ex physicist, wannabe music nerd."
   location         : "Toronto, ON"
   email            :
-  uri              :
-  home             : "https://dtcrout.github.io"
+  uri              : "https://dtcrout.github.io"
+  home             :
   bitbucket        :
   codepen          :
   dribbble         :

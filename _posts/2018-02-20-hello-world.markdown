@@ -6,8 +6,8 @@ classes: wide
 ---
 
 Welcome to my personal site! This site will be used to discuss things that interest me.
-While you're here, [get to know me](https://dtcrout.github.io/about) and
-check out my [personal setup](https://dtcrout.github.io/about).
+While you're here, [get to know me](/about/) and
+check out my [personal setup](/setup/).
 
 This site was created using [Jekyll](https://jekyllrb.com/) with the
 [Minimal Mistakes Theme](https://mmistakes.github.io/minimal-mistakes/).

@@ -16,11 +16,13 @@ which is a lightweight and minimal window manager. For additional productivity,
 I use the Chrome extension [Vimium](https://vimium.github.io/) which brings
 Vim controls to the browser. My dotfiles are also hosted on [GitHub](https://github.com/dtcrout/dotfiles).
 
-### Happy Hacking Professional 2
+### Happy Hacking Professional 2 + Hasu BT Controller
 
 The Happy Hacking Professional 2 is a Japanese 60% layout keyboard with [Topre](https://deskthority.net/wiki/Topre_switch)
 switches. It's portable and extremely pleasant to type on (and listen to).
 The layout differs from traditional keyboards as the escape and backspace keys are
 shifted one row down. The control keys are also removed from their usual position.
 Instead the caps lock key is remapped as a control key. This makes the keyboard
-ergonomic and Emacs keyboard bindings not a one-way ticket to RSI-city.
+ergonomic and Emacs keyboard bindings not a one-way ticket to RSI-city. The
+keyboard has the [Hasu Bluetooth Controller](https://geekhack.org/index.php?topic=71517.0)
+installed which makes it wireless and fully programmable.
