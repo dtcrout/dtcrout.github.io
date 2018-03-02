@@ -3,6 +3,7 @@ layout: single
 title:  "Hello, world!"
 date:   2018-02-20 21:50:04 -0500
 classes: wide
+comments: true
 ---
 
 Welcome to my personal site! This site will be used to discuss things that interest me.

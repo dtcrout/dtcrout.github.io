@@ -3,6 +3,7 @@ permalink: /setup/
 layout: single
 title:  "Setup"
 author_profile: true
+comments: true
 ---
 
 I'm interested in the [gear other people use](https://usesthis.com/) to get their work done.
