@@ -1,375 +1,297 @@
-<!doctype html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.10.0 by Michael Rose
-  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
--->
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
 
-<!-- begin _includes/seo.html --><title>thoughts > /dev/null</title>
-<meta name="description" content="The personal blog of Darshan Crout.">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/" type="image/x-icon">
 
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/">
 
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Darshan Crout" href="http://localhost:4000///feed.xml"/>
 
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="thoughts > /dev/null">
-<meta property="og:title" content="thoughts &gt; /dev/null">
-<meta property="og:url" content="http://localhost:4000/">
+    <!-- Font Awesome -->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendor/font-awesome.min.css">
+    
+    
 
+    <!-- Google Fonts -->
+    
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css"> 
+    
 
+    <!-- KaTeX 0.8.3 -->
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendor/katex.min.css">
+    <script src="/assets/js/vendor/katex.min.js">
+    </script>
+    
 
+    <!-- Google Analytics -->
+    
+    
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Darshan Crout | looking into the /dev/null</title>
+<meta name="generator" content="Jekyll v3.8.3" />
+<meta property="og:title" content="Darshan Crout" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="looking into the /dev/null" />
+<meta property="og:description" content="looking into the /dev/null" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Darshan Crout" />
+<script type="application/ld+json">
+{"name":"Darshan Crout","description":"looking into the /dev/null","url":"http://localhost:4000/","headline":"Darshan Crout","@type":"WebSite","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
 
-  <meta property="og:image" content="http://localhost:4000/assets/images/banner.png">
+    <!-- Manual seo tags -->
+    <!--
+    <title> Darshan Crout</title>
+    <meta name="description" content="">
+    -->
+</head>
 
+  <body>
+    <header class="site-header">
+    
+    <!-- Logo and title -->
+	<div class="branding">
+		<a href="/">
+			<img class="avatar" src="/" alt=""/>
+		</a>
 
-
-
-
-
-
-
-
-  
-
-  
-
-
-<link rel="canonical" href="http://localhost:4000/">
-
-
-
-
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "Darshan Crout",
-      "url": "http://localhost:4000",
-      "sameAs": null
-    }
-  </script>
-
-
-
-
-
-
-
-<!-- end _includes/seo.html -->
-
-
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="thoughts > /dev/null Feed">
-
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
-
-<!--[if lte IE 9]>
-  <style>
-    /* old IE unsupported flexbox fixes */
-    .greedy-nav .site-title {
-      padding-right: 3em;
-    }
-    .greedy-nav button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-    }
-  </style>
-<![endif]-->
-
-
-    <!-- start custom head snippets -->
-
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
-
-  </head>
-
-  <body class="layout--home">
-
-    <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]-->
-
-    <div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="http://localhost:4000/">thoughts > /dev/null</a>
-        <ul class="visible-links">
-          
-            
-            <li class="masthead__menu-item">
-              <a href="http://localhost:4000/now/" >Now</a>
-            </li>
-          
-            
-            <li class="masthead__menu-item">
-              <a href="http://localhost:4000/setup/" >Setup</a>
-            </li>
-          
-            
-            <li class="masthead__menu-item">
-              <a href="http://localhost:4000/about/" >About</a>
-            </li>
-          
-        </ul>
+		<h1 class="site-title">
+			<a href="/">Darshan Crout</a>
+		</h1>
+	</div>
+    
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+    
+    <!-- Menu -->
+    <ul class="hide">
+        <!-- Auto Generation of NORMAL pages in the navbar -->
         
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle Menu</span>
-          <div class="navicon"></div>
-        </button>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/about/">
+                About
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/now/">
+                Now
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/setup/">
+                Setup
+            </a>
+        </li>
+        
+        
+        
+        
+        
+         
+        
+        <!-- Auto Generation of SPECIAL pages in the navbar -->
+        
+          
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" href="http://localhost:4000/search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+            </li>
+          
+        
+          
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" href="http://localhost:4000/tags">
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                </a>
+            </li>
+          
+        
+    </ul>
+        
+	</nav>
+</header>
+
+    <div class="content">
+      <div class="home">
+  
+  <div id="main" class="call-out"
+  style="background-image: url('/assets/images/banner.png')">
+    <p>looking into the /dev/null</p>
+
   </div>
+  
+
+  <div class="posts">
+    
+    <div class="post-teaser">
+      
+      <span>
+          <header>
+            <h1>
+              <a class="post-link" href="/2018/02/20/hello-world.html">
+                Hello, world!
+              </a>
+            </h1>
+            <p class="meta">
+              February 20, 2018
+            </p>
+          </header>
+          <div class="excerpt">
+              Welcome to my personal site! This site will be used to discuss things that interest me.
+While you’re here, get to know me and check out my personal setup.
+
+            <!--Welcome to my personal site! This site will be used to discuss things that interest me.
+While you’re here, get to know me and check out my personal setup.
+-->
+            <!--<a class="button" href="/2018/02/20/hello-world.html">
+              Continue reading
+            </a>-->
+          </div>
+      </span>
+    </div>
+    
+  </div>
+
+  
 </div>
 
-    <div class="initial-content">
-      
-  
-
-
-
-
-
-
-
-
-
-
-
-<div class="page__hero"
-  style=" "
->
-  
-    <img src="http://localhost:4000/assets/images/banner.png" alt="" class="page__hero-image">
-  
-  
-</div>
-
-
-
-
-
-<div id="main" role="main">
-  
-  <div class="sidebar sticky">
-  
-
-
-<div itemscope itemtype="http://schema.org/Person">
-
-  
-    <div class="author__avatar">
-      
-
-      
-        <img src="http://localhost:4000/assets/images/avatar.png" alt="Darshan Crout" itemprop="image">
-      
     </div>
-  
-
-  <div class="author__content">
     
-      <h3 class="author__name" itemprop="name">Darshan Crout</h3>
-    
-    
-      <p class="author__bio" itemprop="description">
-        Data scientist, ex physicist, wannabe music nerd.
-      </p>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Toronto, ON</span>
-        </li>
-      
-
-      
-        <li>
-          <a href="https://dtcrout.github.io" itemprop="url">
-            <i class="fas fa-fw fa-link" aria-hidden="true"></i> Website
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-        <li>
-          <a href="https://www.linkedin.com/in/darshancrout" itemprop="sameAs">
-            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-        <li>
-          <a href="https://github.com/dtcrout" itemprop="sameAs">
-            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <li>
-  <a href="https://open.spotify.com/user/iedy3su2rmbflgr9tw3tu52zk?si=O-y6clQhQmadsasQCnPUTQ" itemprop="sameAs">
-      <i class="fab fa-fw fa-spotify" aria-hidden="true"></i> Spotify
-  </a>
+<footer class="site-footer">
+    <p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+	<a href="http://localhost:4000/feed.xml" title="Follow RSS feed">
+		<span class="fa-stack fa-sm">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
 </li>
 
-    </ul>
-  </div>
-</div>
-
-  
-  </div>
-
-
-  <div class="archive">
-    
-      <h1 class="page__title"></h1>
-    
-    <h3 class="archive__subtitle">Recent Posts</h3>
-
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/hello-world/" rel="permalink">Hello, world!
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Welcome to my personal site! This site will be used to discuss things that interest me.
-While you’re here, get to know me and
-check out my personal setup.
-
-</p>
-  </article>
-</div>
 
 
 
 
 
-  </div>
-</div>
-    </div>
-
-    
-
-    <div class="page__footer">
-      <footer>
-        <!-- start custom footer snippets -->
-
-<!-- end custom footer snippets -->
-        <div class="page__footer-follow">
-  <ul class="social-icons">
-    
-      <li><strong>Follow:</strong></li>
-    
-    
-    
-    
-      <li><a href="https://github.com/dtcrout"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-    
-    
-    
-    <li><a href="http://localhost:4000/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-  </ul>
-</div>
-
-<div class="page__footer-copyright">&copy; 2018 Darshan Crout. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
-
-      </footer>
-    </div>
-
-    
-  <script src="http://localhost:4000/assets/js/main.min.js"></script>
-  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
 
 
 
+
+
+
+
+
+<li>
+	<a href="https://github.com/dtcrout" title="Follow on GitHub">
+		<span class="fa-stack fa-sm">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="http://www.linkedin.com/in/darshancrout" title="Follow on LinkedIn">
+		<span class="fa-stack fa-sm">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
 
 
 

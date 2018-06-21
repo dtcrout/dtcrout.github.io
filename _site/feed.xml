@@ -1,6 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-01T22:42:27-05:00</updated><id>http://localhost:4000/</id><title type="html">thoughts &amp;gt; /dev/null</title><subtitle>The personal blog of Darshan Crout.</subtitle><author><name>Darshan Crout</name><uri>https://dtcrout.github.io</uri></author><entry><title type="html">Hello, world!</title><link href="http://localhost:4000/hello-world/" rel="alternate" type="text/html" title="Hello, world!" /><published>2018-02-20T21:50:04-05:00</published><updated>2018-02-20T21:50:04-05:00</updated><id>http://localhost:4000/hello-world</id><content type="html" xml:base="http://localhost:4000/hello-world/">&lt;p&gt;Welcome to my personal site! This site will be used to discuss things that interest me.
-While you’re here, &lt;a href=&quot;/about/&quot;&gt;get to know me&lt;/a&gt; and
-check out my &lt;a href=&quot;/setup/&quot;&gt;personal setup&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This site was created using &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; with the
-&lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;Minimal Mistakes Theme&lt;/a&gt;.&lt;/p&gt;</content><author><name>Darshan Crout</name><uri>https://dtcrout.github.io</uri></author><summary type="html">Welcome to my personal site! This site will be used to discuss things that interest me. While you’re here, get to know me and check out my personal setup.</summary></entry></feed>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Darshan Crout</title>
+        <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+        <link>http://localhost:4000/</link>
+        <description></description>
+        <pubDate>Thu, 21 Jun 2018 11:26:35 -0400</pubDate>
+        
+        <item>
+            <title>Hello, world!</title>
+            <link>/2018/02/20/hello-world.html</link>
+            <guid isPermaLink="true">/2018/02/20/hello-world.html</guid>
+            <description>&lt;p&gt;Welcome to my personal site! This site will be used to discuss things that interest me.
+While you’re here, &lt;a href=&quot;/about/&quot;&gt;get to know me&lt;/a&gt; and check out my &lt;a href=&quot;/setup/&quot;&gt;personal setup&lt;/a&gt;.&lt;/p&gt;
+</description>
+            <pubDate>Tue, 20 Feb 2018 00:00:00 -0500</pubDate>
+        </item>
+        
+    </channel>
+</rss>
