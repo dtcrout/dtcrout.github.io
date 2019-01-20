@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Darshan Crout on Home</title>
+    <link>http://darshancrout.ai/</link>
+    <description>Recent content in Darshan Crout on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2019 — Darshan Crout — All rights reserved.</copyright>
+    
+	<atom:link href="http://darshancrout.ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://darshancrout.ai/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://darshancrout.ai/about/</guid>
+      <description>I&amp;rsquo;m currently a data scientist at Scotiabank based in Toronto, Ontario. I have a MSc in Computer Science and BSc in Physics.
+During my undergrad, I got involved in mathematical models for biological aggregation and opinion dynamics in which I solved differential equations using Monte Carlo methods. This got me interested in big data problems in addition to the field of machine learning. Naturally loving math and problem solving, I enrolled in the Professional Master&amp;rsquo;s program in Big Data at Simon Fraser University.</description>
+    </item>
+    
+    <item>
+      <title>Now</title>
+      <link>http://darshancrout.ai/now/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://darshancrout.ai/now/</guid>
+      <description> Books  Our Band Could Be Your Life: Scenes from the American Indie Underground 1981-1991, by Michael Azerrad  </description>
+    </item>
+    
+    <item>
+      <title>Setup</title>
+      <link>http://darshancrout.ai/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://darshancrout.ai/setup/</guid>
+      <description>I&amp;rsquo;m interested in the gear other people use to get their work done. If you&amp;rsquo;re at all curious, here&amp;rsquo;s my personal setup:
+Lenovo ThinkPad x220 The xx20 ThinkPad series is the last one to have the classical keyboard. I use this computer as my daily driver. I run Ubuntu LTS as my primary OS, switching between different window managers. For development I use tmux and Spacemacs. My dotfiles are hosted on GitHub.</description>
+    </item>
+    
+  </channel>
+</rss>
