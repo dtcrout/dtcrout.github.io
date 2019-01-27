@@ -7,9 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2019 — Darshan Crout — All rights reserved.</copyright>
+    <lastBuildDate>Sun, 20 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://darshancrout.ai/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building a Site Using Hugo</title>
+      <link>http://darshancrout.ai/posts/build-a-site-using-hugo/</link>
+      <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://darshancrout.ai/posts/build-a-site-using-hugo/</guid>
+      <description>I recently moved my blog to Hugo from Jekyll. My main motivation was that previously having experience with other static site generators such as Pelican and Jekyll, I wanted to give the newest one a try. Other reasons to try Hugo is that it&amp;rsquo;s written in Golang which is supposed to be fast, and that I liked some of the Hugo themes I&amp;rsquo;ve seen.
+If you&amp;rsquo;re not familiar with static site generators, they serve as frameworks for building websites and blogs.</description>
+    </item>
     
     <item>
       <title>About</title>

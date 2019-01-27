@@ -11,8 +11,8 @@ paginatePath="page"
 # Highlighting
 pygmentsCodefences=true
 pygmentsCodeFencesGuessSyntax=true
-pygmentsoptions="linenos=table"
-pygmentsStyle="vs"
+pygmentsoptions="linenos=inline"
+pygmentsStyle="friendly"
 
 # Copyright
 copyright="© 2019 — Darshan Crout — All rights reserved."
