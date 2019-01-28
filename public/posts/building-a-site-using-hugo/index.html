@@ -31,27 +31,29 @@
 
 <div class="post-meta">
     Date &#x5b;
-    <time datetime="2019-01-20">Jan 20, 2019</time>
+    <time datetime="2019-01-27">Jan 27, 2019</time>
     &#x5d;
 </div>
 </header>
 <article>
     
 
-<p>I recently moved my blog to <a href="https://gohugo.io/">Hugo</a> from <a href="https://jekyllrb.com/">Jekyll</a>. My main motivation was that previously having experience with other static site generators such as <a href="https://github.com/getpelican/pelican">Pelican</a> and Jekyll, I wanted to give the newest one a try. Other reasons to try Hugo is that it&rsquo;s written in Golang which is supposed to be fast, and that I liked some of the Hugo themes I&rsquo;ve seen.</p>
+<p>As of late, I&rsquo;ve been getting interested in software philosophies such as the <a href="https://en.wikipedia.org/wiki/Unix_philosophy">Unix philosophy</a> and <a href="https://suckless.org/">Suckless</a>, hoping that they will provide me with some guidance on how to become a better programmer. I&rsquo;ve also been wanting to redo my personal blog for quite some time, but never did because I would always get bogged down on choosing a theme. While browsing for site themes, I came across <a href="https://themes.gohugo.io/simple-hugo-theme/">Simple Hugo Theme</a> which is a <a href="https://gohugo.io/">Hugo</a> theme inspired by <a href="http://bettermotherfuckingwebsite.com/">http://bettermotherfuckingwebsite.com/</a>. If you&rsquo;re familiar with Suckless, <em>bettermotherfuckingwebsite</em> is piece of satire on how modern websites should be designed. Inspired, I decided I should approach my site from a simplicity standpoint and just focus on the content rather than the design. In the process of building it, I learned how to use Hugo.</p>
 
-<p>If you&rsquo;re not familiar with static site generators, they serve as frameworks for building websites and blogs. All of your content is written in Markdown files, and the generator makes the rest of the site. It makes it easy to create a site or blog in minutes without having to fuss with the layout. It also makes it easy to switch to a new theme since all your contents are written in Markdown files.</p>
+<p>For those who are not familiar with static site generators such as Hugo, they serve as frameworks for building websites and blogs. All of your content is written in Markdown files, and the generator makes the rest of the site. It makes it easy to create a site or blog in minutes without having to fuss with the layout. It also makes it easy to switch to a new theme since all your contents are written in Markdown files.</p>
 
-<p>Having gone through the process myself, I figured it would be a good idea to make (yet another) blog post about building a site using Hugo. Hopefully this tutorial will either help others to build their first site, migrate their old site to Hugo, or to help with any bugs or challenges they encounter.</p>
+<p>For those who are already familiar with Suckless, you&rsquo;re probably wondering why am I using Hugo? Site generators are most likely not Suckless&hellip; Well for one, I like the idea of static site generators as the content is independent of the site, since you write everything in Markdown. I also have experience with other site generators in the past such as <a href="https://github.com/getpelican/pelican">Pelican</a> and <a href="https://jekyllrb.com/">Jekyll</a> and I wanted to give Hugo a try. Compared to Jekyll which I used to build my previous site, Hugo is written in Golang which is faster than Ruby, and requires less dependencies to get your site up and running. So while Hugo might not be Suckless, I think of it as a step in the right direction while I better understand the philosophy.</p>
+
+<p>So why write this post? Having gone through the process myself, I figured it would be a good idea to make (yet another) blog post about building a site using Hugo. Hopefully this tutorial will either help others to build their first site, migrate their old site to Hugo, or to help with any bugs or challenges they encounter.</p>
 
 <h2 id="downloading-and-installing-hugo">Downloading and Installing Hugo</h2>
 
 <p>Let&rsquo;s get started by downloading and installing Hugo. The latest version can be found <a href="https://github.com/gohugoio/hugo/releases">here</a>.</p>
 
-<p>Hugo can also be installed via a package manager such as <code>brew</code> on Mac OS or <code>apt</code> on Ubuntu. However, in the processes of building my site, I discovered that certain themes are dependant on which version of Hugo you use. The versions maintained in these repositories might not be the latest release. Therefore, when looking at themes, take note of the version required and install the necessary version.</p>
+<p>Hugo can also be installed via a package manager such as <code>brew</code> on Mac OS or <code>apt</code> on Ubuntu. However, in the processes of building my site, I discovered that certain themes are dependant on which version of Hugo you use. The versions maintained in these repositories might not be the latest release. So when looking at themes, take note of the version required and install the necessary version.</p>
 
 <p>Once Hugo has been installed, we can verify the installation is successul by going to the terminal and running the following command:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ hugo version</pre></div>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ hugo version</code></pre></div>
 <p>which will output the version of Hugo installed on your machine.</p>
 
 <h2 id="creating-a-new-project">Creating a New Project</h2>
@@ -59,44 +61,56 @@
 <p>As mentioned earlier, static blog generators provide frameworks to build a site. It creates all the files necessary to build your site. All you need to do is provide content.</p>
 
 <p>To create a new Hugo project, run:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ hugo new site [name of site]</pre></div>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ hugo new site <span style="color:#666">[</span>name of site<span style="color:#666">]</span></code></pre></div>
 <p>where <code>[name of site]</code> is what you want to name your project. This command will create all the necessary directories and files required to build your site.</p>
 
 <p>Moving into the project directory, we see the following files and directories:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>archetypes/
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>config.toml
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>content/
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>data/
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>layouts/
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span>static/
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span>themes/</pre></div>
+
 <ul>
-<li><code>config.toml</code>: This is the configuration file for your site</li>
-<li><code>content</code>: Markdown files for your content will go here</li>
-<li><code>themes</code>: Directory to store your Hugo themes</li>
+<li><code>config.toml</code>
+
+<ul>
+<li>This is the configuration file for your site. Changes you want to make to the layout, or things you want to add like links to social media will be added here</li>
+</ul></li>
+<li><code>content/</code>
+
+<ul>
+<li>Directory for your site content. Markdown files for your content will go here</li>
+</ul></li>
+<li><code>themes/</code>
+
+<ul>
+<li>Directory to store your Hugo themes</li>
+</ul></li>
 </ul>
 
 <h2 id="installing-a-theme">Installing a Theme</h2>
 
-<p>Currently Hugo does not have a default theme when creating a new project, therefore, we need to install one. You can browse different Hugo themes <a href="https://themes.gohugo.io/">here</a>. You are also free to install themes from other sources like <a href="https://www.reddit.com/r/gohugo/">Reddit</a>.</p>
+<p>Currently Hugo does not have a default theme when creating a new project, therefore we need to install one. You can browse different Hugo themes <a href="https://themes.gohugo.io/">here</a>. You are also free to install themes from other sources like <a href="https://www.reddit.com/r/gohugo/">r/gohugo</a>.</p>
 
 <p>Once you have found a theme you like, you can clone it to the <code>themes</code> directory in your project. In order for your site to use the theme you downloaded, add the line to your <code>config.toml</code>:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>theme=&#34;[name of theme]&#34;</pre></div>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>theme=<span style="color:#4070a0">&#34;[name of theme]&#34;</span></code></pre></div>
 <p>Most theme creators provide documentation and instructions on how to install and use their themes. Mainly, they provide a sample <code>config.toml</code> which you can copy to your project. To get your site up and running, we can start a local instance with the following command:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>hugo server -D</pre></div>
-<p>Running this command will start a live instance of your website in debug mode. This means after making changes to your site, the changes are made in real time.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ hugo server -D</code></pre></div>
+<p>Running this command will start a live instance of your website in debug mode. This means after making changes to your site and saving them, the changes are updated on the site in real time.</p>
 
 <h2 id="creating-content">Creating Content</h2>
 
-<p>Once your theme is installed and your site is set up, it&rsquo;s time to start writing posts.</p>
+<p>Once your theme is installed and your site is set up, it&rsquo;s time to start writing posts. Again it helps to read the instructions on the theme you coose to use as it may require your Markdown files to be in particular directories. Typically, all content is stored in the <code>content/</code> directory. If you are making a blog, your blog posts will go in a separate folder called <code>posts/</code> which is in the <code>content/</code> directory.</p>
 
-<p>Here&rsquo;s a <a href="https://gohugo.io/commands/">cheatsheet</a> of other useful commands.</p>
+<p>To create a new post, run:</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ hugo new <span style="color:#666">[</span>name of post<span style="color:#666">]</span>.md</code></pre></div>
+<p>where <code>[name of post]</code> is the name of your post. This will create a new Markdown file in the <code>content/</code> directory which you can then start editing.</p>
+
+<p>If you&rsquo;re going to have code snippets in your posts, Hugo uses <a href="https://github.com/alecthomas/chroma">Chroma</a> for syntax highlighting and is configured in your <code>config.toml</code> file. More information about syntax highlighting can be found <a href="https://gohugo.io/content-management/syntax-highlighting/">here</a>.</p>
+
+<p>Furthermore, here&rsquo;s a <a href="https://gohugo.io/commands/">cheatsheet</a> of other useful commands that might be helpful when creating content.</p>
 
 <p>Once your site is ready, you can publish your site by running:</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ hugo</pre></div>
-<p>in the root of your project. This will create a new directory called <code>public/</code> which will contain all the files for your website.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>$ hugo</code></pre></div>
+<p>in the root of your project. This will create a new directory called <code>public/</code> which will contain all the files for your website. I&rsquo;m using <a href="https://pages.github.com/">GitHub Pages</a> for my site so publish my site, I simply pushed the contents of the <code>public/</code> directory into my site repository.</p>
 
-<p>Congratulations, your site is ready to be uploaded to GitHub Pages, or whatever service you use!</p>
+<p>If you want to learn more, <a href="https://gohugo.io/documentation/">Hugo&rsquo;s documentation</a> is great and recommended if you would like to how to better tune your site and content.</p>
 
 </article>
 
