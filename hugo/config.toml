@@ -4,6 +4,9 @@ title = "Home"
 
 theme="simple-hugo-theme"
 
+# Disqus
+disqusShortname="http-darshancrout-ai"
+
 # Pagination
 paginate=3
 paginatePath="page"
