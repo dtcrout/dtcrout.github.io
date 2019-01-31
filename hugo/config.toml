@@ -4,8 +4,8 @@ title = "Home"
 
 theme="simple-hugo-theme"
 
-# Disqus
-disqusShortname="http-darshancrout-ai"
+# Google Analytics
+googleAnalytics="UA-133534404-1"
 
 # Pagination
 paginate=3
