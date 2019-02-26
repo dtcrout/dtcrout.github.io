@@ -1,2 +1,6 @@
+# Hugo themes
+hugo/themes
+
+# Mac hidden files
 .DS_Store
 */.DS_Store

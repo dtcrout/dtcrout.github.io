@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Darshan Crout</title>
+    <link>https://darshancrout.ai/post/</link>
+    <description>Recent content in Posts on Darshan Crout</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2019 Darshan Crout</copyright>
+    <lastBuildDate>Sun, 27 Jan 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://darshancrout.ai/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building a Site Using Hugo</title>
+      <link>https://darshancrout.ai/post/building-a-site-using-hugo/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://darshancrout.ai/post/building-a-site-using-hugo/</guid>
+      <description>As of late, I&amp;rsquo;ve been getting interested in software philosophies such as the Unix philosophy and Suckless, hoping that they will provide me with some guidance on how to become a better programmer. I&amp;rsquo;ve also been wanting to redo my personal blog for quite some time, but never did because I would always get bogged down on choosing a theme. While browsing for site themes, I came across Simple Hugo Theme which is a Hugo theme inspired by http://bettermotherfuckingwebsite.</description>
+    </item>
+    
+  </channel>
+</rss>

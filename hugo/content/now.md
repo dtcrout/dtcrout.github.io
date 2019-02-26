@@ -1,6 +1,6 @@
----
-title: Now
----
++++
+title = "Now"
++++
 
 Here are the things I've been up to recently!
 
@@ -12,4 +12,4 @@ Here are the things I've been up to recently!
 
 ### Projects
 
-* [ Jan 27, 2019 ] I switched my site over to [Hugo](https://gohugo.io/) and wrote a blog post about it [here](/posts/building-a-site-using-hugo)
+* **[ Jan 27, 2019 ]** I switched my site over to [Hugo](https://gohugo.io/) and wrote a blog post about it [here](/posts/building-a-site-using-hugo)

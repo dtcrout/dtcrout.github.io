@@ -1,6 +1,6 @@
----
-title: About
----
++++
+title = "About"
++++
 
 I'm currently a data scientist at Scotiabank based in Toronto, Ontario. I have a MSc in Computer Science and BSc in Physics.
 
@@ -12,3 +12,5 @@ Here are more things I'm into:
 * Linux and Emacs
 * Mechanical Keyboards
 * Music
+
+You can also reach me via other mediums: [GitHub](https://github.com/dtcrout), [LinkedIn](https://www.linkedin.com/in/darshancrout/), [Twitter](https://twitter.com/durshmallow).

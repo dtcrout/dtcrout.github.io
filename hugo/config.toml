@@ -1,61 +1,51 @@
-baseURL = "http://darshancrout.ai/"
+baseurl = "https://darshancrout.ai"
+title = "Darshan Crout"
+theme ="hugo-theme-basic"
 languageCode = "en-us"
-title = "Home"
+googleAnalytics = "UA-133534404-1"
+enableEmoji = true 
+copyright = "© 2019 Darshan Crout"
+description = ""
 
-theme="simple-hugo-theme"
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
 
-# Google Analytics
-googleAnalytics="UA-133534404-1"
+[params]
+  titleEmoji = ":alien:"
+  # change this!
+  twitter = "durshmallow"
 
-# Pagination
-paginate=3
-paginatePath="page"
+[Permalinks]
+  post = "post/:slug"
 
-# Highlighting
-pygmentsCodefences=true
-pygmentsCodeFencesGuessSyntax=true
-pygmentsoptions="linenos=inline"
-pygmentsStyle="friendly"
+[[params.menu]]
+  name = "posts"
+  url = "post/"
 
-# Copyright
-copyright="© 2019 — Darshan Crout — All rights reserved."
+# [[params.menu]]
+#   name = "post series"
+#   url = "series/"
 
-# Menu
-  # Header
-  [[menu.main]]
-    url="/about/"
-    name="About"
-    weight=1
-  [[menu.main]]
-    url="/posts/"
-    name="Blog"
-    weight=2
-  [[menu.main]]
-    url="/now/"
-    name="Now"
-    weight=3
-  [[menu.main]]
-    url="/setup/"
-    name="Setup"
-    weight=4
-  # Footer
-  [[menu.footer]]
-    url="https://github.com/dtcrout"
-    name="GitHub"
-    weight=1
-  [[menu.footer]]
-    url="https://www.linkedin.com/in/darshancrout/"
-    name="LinkedIn"
-    weight=2
-  [[menu.footer]]
-    url="https://open.spotify.com/user/iedy3su2rmbflgr9tw3tu52zk?si=O-y6clQhQmadsasQCnPUTQ"
-    name="Spotify"
-    weight=3
-  [[menu.footer]]
-    url="https://www.twitter.com/durshmallow/"
-    name="Twitter"
-    weight=4
+[[params.menu]]
+  name = "now"
+  url = "now/"
 
-# Links format
-[permalinks]
-  post="/post/:year/:month/:title/"
+[[params.menu]]
+  name = "setup"
+  url = "setup/"
+
+[[params.menu]]
+  name = "about"
+  url = "about/"
+  
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
