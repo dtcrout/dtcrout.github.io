@@ -1,6 +1,6 @@
-+++
-title = "Setup"
-+++
+---
+title: "Setup"
+---
 
 I'm interested in the [gear other people use](https://usesthis.com/) to get their work done.
 If you're at all curious, here's my personal setup:

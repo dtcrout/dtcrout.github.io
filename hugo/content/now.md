@@ -1,6 +1,6 @@
-+++
-title = "Now"
-+++
+---
+title: "Now"
+---
 
 Here are the things I've been up to recently!
 
@@ -12,4 +12,5 @@ Here are the things I've been up to recently!
 
 ### Projects
 
+* **[ May 11, 2019 ]** I made an image captioning generation model to generate YouTube thumbnail titles. Write up can be found [here](/posts/generate-yt-titles-using-lstms) and code [here](https://github.com/dtcrout/yt-title-generator)
 * **[ Jan 27, 2019 ]** I switched my site over to [Hugo](https://gohugo.io/) and wrote a blog post about it [here](/posts/building-a-site-using-hugo)

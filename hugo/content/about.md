@@ -1,6 +1,6 @@
-+++
-title = "About"
-+++
+---
+title: "About"
+---
 
 I'm currently a data scientist at Scotiabank based in Toronto, Ontario. I have a MSc in Computer Science and BSc in Physics.
 

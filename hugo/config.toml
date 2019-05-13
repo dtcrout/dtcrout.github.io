@@ -3,7 +3,7 @@ title = "Darshan Crout"
 theme ="hugo-theme-basic"
 languageCode = "en-us"
 googleAnalytics = "UA-133534404-1"
-enableEmoji = true 
+enableEmoji = true
 copyright = "© 2019 Darshan Crout"
 description = ""
 
@@ -13,7 +13,7 @@ description = ""
   tag = "tags"
 
 [params]
-  titleEmoji = ":alien:"
+  titleEmoji = ":taco:"
   # change this!
   twitter = "durshmallow"
 
@@ -39,7 +39,7 @@ description = ""
 [[params.menu]]
   name = "about"
   url = "about/"
-  
+
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true

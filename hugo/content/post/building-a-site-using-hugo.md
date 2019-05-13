@@ -1,9 +1,9 @@
-+++
-author = "Darshan Crout"
-title = "Building a Site Using Hugo"
-date = 2019-01-27
-draft = false
-+++
+---
+author: Darshan Crout
+title: "Building a Site Using Hugo"
+date: 2019-01-27
+draft: false
+---
 
 As of late, I've been getting interested in software philosophies such as the [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) and [Suckless](https://suckless.org/), hoping that they will provide me with some guidance on how to become a better programmer. I've also been wanting to redo my personal blog for quite some time, but never did because I would always get bogged down on choosing a theme. While browsing for site themes, I came across [Simple Hugo Theme](https://themes.gohugo.io/simple-hugo-theme/) which is a [Hugo](https://gohugo.io/) theme inspired by http://bettermotherfuckingwebsite.com/. If you're familiar with Suckless, *bettermotherfuckingwebsite* is piece of satire on how modern websites should be designed. Inspired, I decided I should approach my site from a simplicity standpoint and just focus on the content rather than the design. In the process of building it, I learned how to use Hugo.
 
