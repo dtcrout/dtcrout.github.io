@@ -2,7 +2,7 @@
 author: Darshan Crout
 title: "Generate YouTube Titles Using Image Captioning"
 date: 2019-05-11
-draft: true
+draft: false
 ---
 
 I watch a lot of YouTube. In fact a lot of younger people watch more YouTube then they do television. If you're like me, YouTube not only acts as an endless source of entertainment
