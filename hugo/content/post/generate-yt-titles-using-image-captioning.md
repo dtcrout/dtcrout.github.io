@@ -7,12 +7,12 @@ draft: false
 
 I watch a lot of YouTube. In fact a lot of younger people watch more YouTube then they do television. If you're like me, YouTube not only acts as an endless source of entertainment
 but it also serves as a source of knowledge and information. The platform has videos on just about anything, from how to make [fermented food](https://www.youtube.com/watch?v=zx8pYMkkKXg),
-[cracking the Sega Saturn](https://www.youtube.com/watch?v=jOyfZex7B3E), and [Joe Rogan interviewing himself](https://www.youtube.com/watch?v=-xY_D8SMNtE).
-However, if you've been on the platform as long as I have, you have probably realized by now certain patterns in how YouTubers structure their content. For example, content creators engage in
+[cracking the Sega Saturn](https://www.youtube.com/watch?v=jOyfZex7B3E), or [Joe Rogan interviewing himself](https://www.youtube.com/watch?v=-xY_D8SMNtE).
+However, if you've been on the platform as long as I have, you have probably caught on by now the patterns in how YouTubers structure their content. For example, content creators engage in
 tactics such as using [clickbait](https://en.wikipedia.org/wiki/Clickbait) titles and thumbnails to engage consumers of the platform and to optimize for search engine optimization (SEO).
 
-And so while YouTube acts as a great bastion of information, YouTube's community has developed it's own unique culture and language as a consequence of the pursuit of this SEO.
-Motivated bycuriosity, I thought about what it would be like to train a machine learning model based on this unique and strange internet subculture. Using LSTMs and an encoder-decoder model,
+As a consequence of content creators engaging in these practices, YouTube has developed it's own unique culture and language. Motivated by curiosity,
+I thought about what it would be like to train an image captioning model based on this strange internet subculture. Using LSTMs and an encoder-decoder model,
 I trained an image caption model on YouTube thumbnails and their titles to generate new titles. The code can be found on [GitHub](https://github.com/dtcrout/yt-title-generator).
 
 ![They take time!](static/images/koji.png)
