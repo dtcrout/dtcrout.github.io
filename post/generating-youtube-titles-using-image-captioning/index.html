@@ -43,7 +43,7 @@
 />
 <meta
   name="twitter:description"
-  content="I watch a lot of YouTube. In fact, a lot of younger people watch more YouTube then they watch television. If you&rsquo;re like me, YouTube is not only an endless source of entertainment, but it also serves as a source of knowledge and information. The platform has videos on just about anything from how to make your own fermented food, cracking the Sega Saturn or Joe Rogan interviewing himself. However, if you have been on the platform for as long as I have, you have probably caught on by now just how much clickbait YouTube creators use.|"
+  content="I watch a lot of YouTube. In fact, a lot of younger people watch more YouTube than they watch television. If you&rsquo;re like me, YouTube is not only an endless source of entertainment, but it also serves as a source of knowledge and information. The platform has videos on just about anything from how to make your own fermented food, cracking the Sega Saturn or Joe Rogan interviewing himself. However, if you have been on the platform for as long as I have, you have probably caught on by now just how much clickbait YouTube creators use.|"
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://darshancrout.ai/post/generating-youtube-titles-using-image-captioning/" />
@@ -114,7 +114,7 @@ if (!doNotTrack) {
         
 
 <p>I watch a lot of <a href="https://www.youtube.com/">YouTube</a>. In fact, a lot of younger people <a href="https://www.thinkwithgoogle.com/consumer-insights/video-trends-where-audience-watching/">watch more YouTube</a>
-then they watch television. If you&rsquo;re like me, YouTube is not only an endless source of entertainment, but it also serves as a source of knowledge and information. The platform has videos on
+than they watch television. If you&rsquo;re like me, YouTube is not only an endless source of entertainment, but it also serves as a source of knowledge and information. The platform has videos on
 just about anything from how to make your own <a href="https://www.youtube.com/watch?v=zx8pYMkkKXg">fermented food</a>, <a href="https://www.youtube.com/watch?v=jOyfZex7B3E">cracking the Sega Saturn</a> or
 <a href="https://www.youtube.com/watch?v=-xY_D8SMNtE">Joe Rogan interviewing himself</a>. However, if you have been on the platform for as long as I have, you have probably caught on by now
 just how much <a href="https://en.wikipedia.org/wiki/Clickbait">clickbait</a> YouTube creators use. For example, creators structure their video thumbnails a particular way to catch the audiences&rsquo;
@@ -157,7 +157,7 @@ probability of all other words. If we want to generate less non-sensical answers
 probable word, let&rsquo;s consider randomly choosing uniformly over all words. In addition, another heuristic we should consider is to eliminate words appearing twice. This will help to make
 our results <em>appear</em> like proper sentences or titles. Applying these heuristics, we get results that are interesting to say the least.</p>
 
-<p>What originally make me interested about this project was just how downright nonsensical video titles can be as they can be clickbaity and contain a lot of internet slang. It&rsquo;s great to
+<p>What originally got me interested about doing this project was just how downright nonsensical video titles can be as they can be clickbaity and contain a lot of internet slang. It&rsquo;s great to
 see some of the generated captions contain some of these words.</p>
 
 <p><img src="/post/images/caption_generation/litfam.png" alt="litfam" /></p>
@@ -194,7 +194,7 @@ So for the sake of simplicity, I proceeded with training on just US videos.</p>
 <p>Specifically I&rsquo;m talking about how to make the text generated appear as real titles. One possible way would be to incorporate part-of-speech tagging to the generation.
 This can add some overall structure to the titles, therefore making them appear less nonsensical.</p>
 
-<h4 id="use-more-sophisticated-models">Use more sophisticated models</h4>
+<h4 id="using-more-sophisticated-models">Using more sophisticated models</h4>
 
 <p>Attention models are big right now for image captioning. However your model is only as good as the data you train it on, and if we&rsquo;re only working with <code>41,000 records</code>,
 most of which are non-sensical in the first place, attention models might not give us fantastic results, but it would be interesting nonetheless.</p>
