@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="Generating YouTube Titles Using Image Captioning" />
+<meta property="og:site_name" content="Darshan Crout" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://darshancrout.ai/post/generating-youtube-titles-using-image-captioning/" />
+<meta property="og:locale" content="en-us" />
+<meta property="article:published_time" content="2019-05-11
+" /> <meta property="article:modified_time" content="2019-05-11
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@durshmallow" />
+<meta name="twitter:creator" content="@durshmallow" />
+<meta
+  name="twitter:title"
+  content="Generating YouTube Titles Using Image Captioning | Darshan Crout"
+/>
+<meta
+  name="twitter:description"
+  content="I watch a lot of YouTube. In fact, a lot of younger people watch more YouTube then they watch television. If you&rsquo;re like me, YouTube is not only an endless source of entertainment, but it also serves as a source of knowledge and information. The platform has videos on just about anything from how to make your own fermented food, cracking the Sega Saturn or Joe Rogan interviewing himself. However, if you have been on the platform for as long as I have, you have probably caught on by now just how much clickbait YouTube creators use.|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://darshancrout.ai/post/generating-youtube-titles-using-image-captioning/" />
+
+
+
+    <title>Generating YouTube Titles Using Image Captioning</title>
+    <link rel="canonical" href="https://darshancrout.ai/post/generating-youtube-titles-using-image-captioning/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://darshancrout.aicss/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-133534404-1', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="en-us"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://darshancrout.ai" class="b bb bw1 pb1 no-underline black">Darshan Crout</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">Generating YouTube Titles Using Image Captioning</h1>
+    <span class="f6 gray">May 11, 2019</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        
+
+<p>I watch a lot of <a href="https://www.youtube.com/">YouTube</a>. In fact, a lot of younger people <a href="https://www.thinkwithgoogle.com/consumer-insights/video-trends-where-audience-watching/">watch more YouTube</a>
+then they watch television. If you&rsquo;re like me, YouTube is not only an endless source of entertainment, but it also serves as a source of knowledge and information. The platform has videos on
+just about anything from how to make your own <a href="https://www.youtube.com/watch?v=zx8pYMkkKXg">fermented food</a>, <a href="https://www.youtube.com/watch?v=jOyfZex7B3E">cracking the Sega Saturn</a> or
+<a href="https://www.youtube.com/watch?v=-xY_D8SMNtE">Joe Rogan interviewing himself</a>. However, if you have been on the platform for as long as I have, you have probably caught on by now
+just how much <a href="https://en.wikipedia.org/wiki/Clickbait">clickbait</a> YouTube creators use. For example, creators structure their video thumbnails a particular way to catch the audiences&rsquo;
+attention and the same thing can be said for the titles. This helps with getting their videos picked up by the search engine optimization algorithm.</p>
+
+<p><img src="/post/images/caption_generation/clickbait.png" alt="Clickbait Example" /></p>
+
+<p>As a consequence of content creators engaging in these practices, YouTube and its community has unintentionally developed its own unique style and language.
+Motivated by curiosity, I thought about what it would be like to train an image captioning model based on this strange internet subculture. Using
+<a href="https://arxiv.org/abs/1708.02043">LSTMs and an encoder-decoder model</a>, I trained an image caption model on YouTube thumbnails and their titles to generate new titles.
+The code can be found on <a href="https://github.com/dtcrout/yt-title-generator">GitHub</a>.</p>
+
+<p><img src="/post/images/caption_generation/koji.png" alt="They take time!" /></p>
+
+<h2 id="getting-the-data">Getting the Data</h2>
+
+<p>If we want to get a good representation of what YouTube represents today, we look no further than the trending videos found on its homepage. The trending page is essentially the top
+watched videos on the platform. YouTube does provide its own API to obtain metadata for its videos, but you&rsquo;re limited to making a limited number of requests. Doing a quick Google
+search, I found an already compiled <a href="https://www.kaggle.com/datasnaek/youtube-new/version/114">Kaggle dataset</a> which has trending videos based on different regions. For this project,
+I used US videos which have a total of <code>40,949 records</code>. Not a lot to work with, but we make do.</p>
+
+<h2 id="modelling">Modelling</h2>
+
+<p>To caption the images, I used LSTMs with an encoder-decoder model. Model architecture and generation code was adapted from a tutorial on
+<a href="https://machinelearningmastery.com/develop-a-deep-learning-caption-generation-model-in-python/">Machine Learning Mastery</a>.</p>
+
+<p>Image features were generated using VGG16 and the titles were minimal preprocessed by just removing punctuation and words shorter than one character.
+Stopwords were left in. The vocabulary size was <code>7,788 words</code>. The dataset was split into a <code>70/30</code> test/train ratio and the model was trained for
+<code>10 epochs</code> using Adam as our optimizer. During training, the loss was not decreasing after <code>3 epochs</code>, hence why the model was not trained for long.</p>
+
+<h2 id="results">Results</h2>
+
+<p>After training the model, captions were generated for all thumbnails and compared to the original titles. Immediately we notice
+something strange&hellip;</p>
+
+<p><img src="/post/images/caption_generation/repeated.png" alt="Model is generating repeating words" /></p>
+
+<p>For a given thumbnail and starting word, we choose the next most probable following word. In our models case, we see that one word has a higher
+probability of all other words. If we want to generate less non-sensical answers, we need to create some heuristics and hope for the best. Instead of choosing the next most
+probable word, let&rsquo;s consider randomly choosing uniformly over all words. In addition, another heuristic we should consider is to eliminate words appearing twice. This will help to make
+our results <em>appear</em> like proper sentences or titles. Applying these heuristics, we get results that are interesting to say the least.</p>
+
+<p>What originally make me interested about this project was just how downright nonsensical video titles can be as they can be clickbaity and contain a lot of internet slang. It&rsquo;s great to
+see some of the generated captions contain some of these words.</p>
+
+<p><img src="/post/images/caption_generation/litfam.png" alt="litfam" /></p>
+
+<p>Another thing we notice is that a lot of videos contain terminology used for music videos or movie trailers, eg. <em>official</em>, <em>hd</em>, <em>music</em> and <em>trailer</em>. This poses a question
+of just how much YouTube&rsquo;s trending videos contain trailers and music videos compared to actual videos by content creators.</p>
+
+<p><img src="/post/images/caption_generation/trailers.png" alt="Trailers" /></p>
+
+<p>Despite some of the generated captions being nonsensical, they don&rsquo;t seem that out of the ordinary. In fact, perhaps if we limit our scope to a few categories of videos and
+increase the size of our data, we would get some decent results.</p>
+
+<h2 id="further-work">Further Work</h2>
+
+<p>Experimenting with an image caption generation model with YouTube thumbnails shows some promise, however the results could be better. A couple of reasons for these not-so-good results
+being a lack of data and an imbalance of different categories of videos. Some other things we can consider in order to improve this model can be:</p>
+
+<h4 id="getting-better-data">Getting better data</h4>
+
+<p>For this project, we want to consider only english videos, which are the United States (US), Canada (CA) and Great Britain (GB) regions. Below is a breakdown of the records
+in each dataset:</p>
+
+<ul>
+<li>US videos: <code>40,949 records</code></li>
+<li>CA videos: <code>40,881 records</code></li>
+<li>GB videos: <code>38,916 records</code></li>
+</ul>
+
+<p>Eliminating duplicates among all datasets, this gives us a total of <code>111,394</code> records. This isn&rsquo;t a bad number of videos, however not all of them have English only titles.
+So for the sake of simplicity, I proceeded with training on just US videos.</p>
+
+<h4 id="adding-more-heuristics-the-text-generation-process">Adding more heuristics the text generation process</h4>
+
+<p>Specifically I&rsquo;m talking about how to make the text generated appear as real titles. One possible way would be to incorporate part-of-speech tagging to the generation.
+This can add some overall structure to the titles, therefore making them appear less nonsensical.</p>
+
+<h4 id="use-more-sophisticated-models">Use more sophisticated models</h4>
+
+<p>Attention models are big right now for image captioning. However your model is only as good as the data you train it on, and if we&rsquo;re only working with <code>41,000 records</code>,
+most of which are non-sensical in the first place, attention models might not give us fantastic results, but it would be interesting nonetheless.</p>
+
+<p>Some other things we can do is to limit the categories of the videos used for training. If we happen to create a decent caption generation,
+then we would like to validate our captions using something like a <a href="https://en.wikipedia.org/wiki/BLEU">BLEU score</a>.</p>
+
+<p>YouTube&rsquo;s titles are not coherent sentences in the first place. In fact, some of them, for example music videos or movie trailers are just key words put together, therefore
+our crude sentence generator has lended itself very nicely for this problem.</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: May 11, 2019. Published at: 2019-05-11.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        © 2019 Darshan Crout
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>
