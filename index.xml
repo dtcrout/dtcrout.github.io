@@ -47,7 +47,7 @@ During my undergrad, I got involved in mathematical models for biological aggreg
       
       <guid>https://darshancrout.ai/now/</guid>
       <description>Here are the things I&amp;rsquo;ve been up to recently!
-Books Currently Reading  Our Band Could Be Your Life: Scenes from the American Indie Underground 1981-1991, by Michael Azerrad Thinking, Fast and Slow, by Daniel Kahneman  Projects  [June 1, 2019] Spotitude is now a web app: https://spotitude.me/. Look at your top tracks on different time ranges and create a playlist. Made with Vue.js. Code found here [ May 26, 2019 ] Frustrated about how Spotify doesn&amp;rsquo;t provide their users with their analytics, I created a tool called Spotitude which displays a user&amp;rsquo;s top 25 tracks.</description>
+Reading 📚 Currently Reading  Our Band Could Be Your Life: Scenes from the American Indie Underground 1981-1991, by Michael Azerrad Thinking, Fast and Slow, by Daniel Kahneman Existentialism from Dostoevsky to Sartre: Basic Writings of Existentialism by Kaufmann, Kierkegaard, Nietzsche, Jaspers, Heidegger, and Others, by Walter Kaufmann  Paper Pile  BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (2019) Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova Neural Ordinary Differential Equations (2019) Ricky T.</description>
     </item>
     
     <item>
@@ -57,7 +57,7 @@ Books Currently Reading  Our Band Could Be Your Life: Scenes from the American I
       
       <guid>https://darshancrout.ai/setup/</guid>
       <description>I&amp;rsquo;m interested in the gear other people use to get their work done. If you&amp;rsquo;re at all curious, here&amp;rsquo;s my personal setup:
-Lenovo ThinkPad x220 The xx20 ThinkPad series is the last one to have the classical keyboard. I use this computer as my daily driver. I run Ubuntu LTS as my primary OS, switching between different window managers. For development I use tmux and Spacemacs. My dotfiles are hosted on GitHub.</description>
+Lenovo ThinkPad x220 💻 The xx20 ThinkPad series is the last one to have the classical keyboard. I use this computer as my daily driver. I run Ubuntu LTS as my primary OS, switching between different window managers. For development I use tmux and Spacemacs. My dotfiles are hosted on GitHub.</description>
     </item>
     
   </channel>
