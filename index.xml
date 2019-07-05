@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2019 Darshan Crout</copyright>
-    <lastBuildDate>Sat, 11 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darshancrout.ai/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Big Trouble in Little Quanta: A critique of complex-valued networks for NLP explainability</title>
+      <link>https://darshancrout.ai/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://darshancrout.ai/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/</guid>
+      <description>What do you do on vacation? Do you relax on a nice, hot sunny beach sipping on an ice cool drink? Do you travel across South East Asia with a loved one eating new and delicious foods? Perhaps you enjoy adventuring and hiking in the great, beautiful Swiss Alps? Or maybe you&amp;rsquo;re more like me, someone who is at home catching up on their machine learning papers. One paper in particular caught my full attention: CNM: An Interpretable Complex-valued network for Matching by Qiuchi Li, Benyou Wang and Massimo Melucci.</description>
+    </item>
     
     <item>
       <title>Generating YouTube Titles Using Image Captioning</title>
