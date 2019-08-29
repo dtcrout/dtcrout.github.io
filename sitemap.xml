@@ -3,20 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://darshancrout.ai/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/</loc>
-    <lastmod>2019-07-05T00:00:00+00:00</lastmod>
+    <loc>https://darshancrout.ai/</loc>
+    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darshancrout.ai/</loc>
-    <lastmod>2019-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://darshancrout.ai/post/make-life-easier-with-makefiles/</loc>
+    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://darshancrout.ai/post/</loc>
+    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darshancrout.ai/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/</loc>
     <lastmod>2019-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -35,7 +38,6 @@
   
   <url>
     <loc>https://darshancrout.ai/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -44,7 +46,6 @@
   
   <url>
     <loc>https://darshancrout.ai/series/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -53,7 +54,6 @@
   
   <url>
     <loc>https://darshancrout.ai/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

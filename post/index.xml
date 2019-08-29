@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2019 Darshan Crout</copyright>
-    <lastBuildDate>Fri, 05 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darshancrout.ai/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Make life easier with Makefiles</title>
+      <link>https://darshancrout.ai/post/make-life-easier-with-makefiles/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://darshancrout.ai/post/make-life-easier-with-makefiles/</guid>
+      <description>You&amp;rsquo;re at work one day, when your boss approaches you with a peculiar task.
+&amp;ldquo;Open your email. I sent you a piece of code&amp;rdquo;, he says. &amp;ldquo;There&amp;rsquo;s another team who wrote it and they say it takes days to run&amp;hellip; They have no idea why though&amp;rdquo;.
+You go to your terminal and open the file in your text editor. The file opens and you take a quick glimpse of the code.</description>
+    </item>
     
     <item>
       <title>Big Trouble in Little Quanta: A critique of complex-valued networks for NLP explainability</title>
@@ -22,7 +33,7 @@
     </item>
     
     <item>
-      <title>Generating YouTube Titles Using Image Captioning</title>
+      <title>Generating YouTube titles using image captioning</title>
       <link>https://darshancrout.ai/post/generating-youtube-titles-using-image-captioning/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
@@ -31,7 +42,7 @@
     </item>
     
     <item>
-      <title>Building a Site Using Hugo</title>
+      <title>Building a site using Hugo</title>
       <link>https://darshancrout.ai/post/building-a-site-using-hugo/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
