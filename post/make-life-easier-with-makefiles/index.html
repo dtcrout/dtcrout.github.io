@@ -121,7 +121,7 @@ if (!doNotTrack) {
 
 <p>You go to your terminal and open the file in your text editor. The file opens and you take a quick glimpse of the code. Java is known to be ugly, but this is different. Something isn&rsquo;t quite right. You can&rsquo;t help but to feel a bit disturbed.</p>
 
-<p>Glancing over the code a bit more, you realize that there are no comments. There&rsquo;s not one docstring is in sight. All the variables and functions have generic names like <code>array1</code> or <code>x</code>. There are no references, no signals to <em>what</em> anything does, or what <em>purpose</em> they serve.</p>
+<p>Glancing over the code a bit more, you realize that there are no comments. There&rsquo;s not one docstring that is in sight. All the variables and functions have generic names like <code>array1</code> or <code>x</code>. There are no references, no signals to <em>what</em> anything does, or what <em>purpose</em> they serve.</p>
 
 <p>You look more into the code and to your disbelief the author wrote their own casting function. Given a number in a string, the function checks if it&rsquo;s zero, else if it&rsquo;s one, else if it&rsquo;s two, else if it&rsquo;s three&hellip; You scroll down further and suddenly the <em>unhandiness</em> of the code shows itself.</p>
 
@@ -147,15 +147,15 @@ if (!doNotTrack) {
 
 <h2 id="what-is-a-makefile">What is a Makefile?</h2>
 
-<p>Makefiles help you automate your development workflow, make installation of your project simple and help standardization of working environments for other contributors. You see them when installing packages from source, or for C development, but they can be used for a lot of other things.</p>
+<p>Makefiles help you automate your development workflow, make the installation of your project simple and help standardization of working environments for other contributors. You see them when installing packages from source, or for C development, but they can be used for a lot of other things.</p>
 
 <p>In essence, they are a wrapper or an alias for commands or a series of commands. This can be very handy for example when you&rsquo;re debugging code and need to execute test cases and check those test cases every time you make a change. This is what I did when I was porting the Java code over to Python, needing to check whether or not the output remained the same after every change I made.</p>
 
-<p>I use them for just about everything now. Take my blog as another example. Whenever I come back to writing a new post, I typically don&rsquo;t have my development environment set up. I need to download my theme and I need to start up a server to preview my site locally. Because I always forget these commands I made a <code>Makefile</code> to make the setup easier.</p>
+<p>I use them for just about everything now. Take my blog as another example. Whenever I come back to writing a new post, I typically don&rsquo;t have my development environment set up. I need to download my theme and I need to start up a server to preview my site locally. Because I always forget these commands I made a Makefile to make the setup easier.</p>
 
 <h2 id="how-do-i-make-a-makefile">How do I <em>make</em> a Makefile?</h2>
 
-<p>Consider the following example. You&rsquo;re developing a Python web server. You need a command to run the application, and another command to execute some <code>curl</code> commands to test your endpoints.</p>
+<p>Consider the following example: you&rsquo;re developing a Python web server. When developing the application, you need a command to run the application, and another command to execute some <code>curl</code> commands to test your endpoints. The output of the <code>curl</code> command will be compared to an expected output like <code>diff</code>.</p>
 
 <p>Adding a <code>Makefile</code> in the root of the directory of your project, we can make a command to execute your Python app:</p>
 
@@ -175,7 +175,7 @@ make test:
     diff output.txt test.txt
 </code></pre>
 
-<p>Running <code>make test</code> will execute all those lines in one command, allowing you to move back to coding or take action if differences arise.</p>
+<p>Running <code>make test</code> will execute all those lines in one command, allowing you to move back to coding or take action if differences arise. No need to switch terminals, copy/paste commands, or use other applications.</p>
 
 <h2 id="i-still-don-t-know-what-to-make-of-makefiles">I still don&rsquo;t know what to <em>make</em> of Makefiles</h2>
 
@@ -212,7 +212,7 @@ clean: deps
 	rm -rf *.html *.csv .cache-* __pycache__ venv/
 </code></pre>
 
-<p>In this Makefile, we have a <code>help</code> task. Typing <code>make help</code> in the terminal will provide some documentation on what each other task in the Makefile does.</p>
+<p>In this Makefile, we have a <code>help</code> target. Typing <code>make help</code> in the terminal will provide some documentation on what each other task in the Makefile does.</p>
 
 <p><a href="https://github.com/dtcrout/spotitude">Spotitude</a> is an open-source project. Having a Makefile included in the project makes it simple for contributors to install the dependencies (<code>make deps</code>) and standardize the repo (<code>make clean</code>).</p>
 
