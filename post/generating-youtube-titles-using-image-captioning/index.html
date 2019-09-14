@@ -120,14 +120,18 @@ just about anything from how to make your own <a href="https://www.youtube.com/w
 just how much <a href="https://en.wikipedia.org/wiki/Clickbait">clickbait</a> YouTube creators use. For example, creators structure their video thumbnails a particular way to catch the audiences&rsquo;
 attention and the same thing can be said for the titles. This helps with getting their videos picked up by the search engine optimization algorithm.</p>
 
-<p><img src="/post/images/caption_generation/clickbait.png" alt="Clickbait Example" /></p>
+<!-- ![Clickbait Example](/post/images/caption_generation/clickbait.png) -->
+
+<p><center><img src="/post/images/caption_generation/clickbait.png" alt="drawing" width="800"/></center></p>
 
 <p>As a consequence of content creators engaging in these practices, YouTube and its community has unintentionally developed its own unique style and language.
 Motivated by curiosity, I thought about what it would be like to train an image captioning model based on this strange internet subculture. Using
 <a href="https://arxiv.org/abs/1708.02043">LSTMs and an encoder-decoder model</a>, I trained an image caption model on YouTube thumbnails and their titles to generate new titles.
 The code can be found on <a href="https://github.com/dtcrout/yt-title-generator">GitHub</a>.</p>
 
-<p><img src="/post/images/caption_generation/koji.png" alt="They take time!" /></p>
+<!-- ![They take time!](/post/images/caption_generation/koji.png) -->
+
+<p><center><img src="/post/images/caption_generation/koji.png" alt="drawing" width="800"/></center></p>
 
 <h2 id="getting-the-data">Getting the Data</h2>
 
@@ -150,7 +154,9 @@ Stopwords were left in. The vocabulary size was <code>7,788 words</code>. The da
 <p>After training the model, captions were generated for all thumbnails and compared to the original titles. Immediately we notice
 something strange&hellip;</p>
 
-<p><img src="/post/images/caption_generation/repeated.png" alt="Model is generating repeating words" /></p>
+<!-- ![Model is generating repeating words](/post/images/caption_generation/repeated.png) -->
+
+<p><center><img src="/post/images/caption_generation/repeated.png" alt="drawing" width="800"/></center></p>
 
 <p>For a given thumbnail and starting word, we choose the next most probable following word. In our models case, we see that one word has a higher
 probability of all other words. If we want to generate less non-sensical answers, we need to create some heuristics and hope for the best. Instead of choosing the next most
@@ -160,12 +166,16 @@ our results <em>appear</em> like proper sentences or titles. Applying these heur
 <p>What originally got me interested about doing this project was just how downright nonsensical video titles can be as they can be clickbaity and contain a lot of internet slang. It&rsquo;s great to
 see some of the generated captions contain some of these words.</p>
 
-<p><img src="/post/images/caption_generation/litfam.png" alt="litfam" /></p>
+<!-- ![litfam](/post/images/caption_generation/litfam.png) -->
+
+<p><center><img src="/post/images/caption_generation/litfam.png" alt="drawing" width="800"/></center></p>
 
 <p>Another thing we notice is that a lot of videos contain terminology used for music videos or movie trailers, eg. <em>official</em>, <em>hd</em>, <em>music</em> and <em>trailer</em>. This poses a question
 of just how much YouTube&rsquo;s trending videos contain trailers and music videos compared to actual videos by content creators.</p>
 
-<p><img src="/post/images/caption_generation/trailers.png" alt="Trailers" /></p>
+<!-- ![Trailers](/post/images/caption_generation/trailers.png) -->
+
+<p><center><img src="/post/images/caption_generation/trailers.png" alt="drawing" width="800"/></center></p>
 
 <p>Despite some of the generated captions being nonsensical, they don&rsquo;t seem that out of the ordinary. In fact, perhaps if we limit our scope to a few categories of videos and
 increase the size of our data, we would get some decent results.</p>
@@ -219,7 +229,7 @@ our crude sentence generator has lended itself very nicely for this problem.</p>
   <footer>
     <div>
       <p class="f6 gray mt6 lh-copy">
-        © 2019 Darshan Crout
+        © 2019 Darshan Crout <a href='https://twitter.com/durshmallow'>(@durshmallow)</a>. All rights reserved.
       </p>
     </div>
   </footer>

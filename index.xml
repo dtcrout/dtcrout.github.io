@@ -6,7 +6,7 @@
     <description>Recent content on Darshan Crout</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2019 Darshan Crout</copyright>
+    <copyright>© 2019 Darshan Crout &lt;a href=&#39;https://twitter.com/durshmallow&#39;&gt;(@durshmallow)&lt;/a&gt;. All rights reserved.</copyright>
     <lastBuildDate>Wed, 28 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darshancrout.ai/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,8 @@
       <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://darshancrout.ai/post/make-life-easier-with-makefiles/</guid>
-      <description>You&amp;rsquo;re at work one day, when your boss approaches you with a peculiar task.
+      <description>Imagine the following scenario:
+You&amp;rsquo;re at work one day, when your boss approaches you with a peculiar task.
 &amp;ldquo;Open your email. I sent you a piece of code&amp;rdquo;, he says. &amp;ldquo;There&amp;rsquo;s another team who wrote it and they say it takes days to run&amp;hellip; They have no idea why though&amp;rdquo;.
 You go to your terminal and open the file in your text editor. The file opens and you take a quick glimpse of the code.</description>
     </item>
