@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="Prevent Data Leakage in Your Data Science Project" />
+<meta property="og:site_name" content="Darshan Crout" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://darshancrout.ai/post/prevent-data-leakage-in-your-data-science-project/" />
+<meta property="og:locale" content="en-us" />
+<meta property="article:published_time" content="2019-09-20
+" /> <meta property="article:modified_time" content="2019-09-20
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@durshmallow" />
+<meta name="twitter:creator" content="@durshmallow" />
+<meta
+  name="twitter:title"
+  content="Prevent Data Leakage in Your Data Science Project | Darshan Crout"
+/>
+<meta
+  name="twitter:description"
+  content="Data leaks happen. With the ever-growing multitude of software-based services we use in the everydayness, our usage of Internet of Things-things, to the ready-to-hand rewards systems on our phones, our personal data is out there in the world. As such, our data has a greater chance of leaking and getting into places we don&rsquo;t want it to end up.
+As data scientists and machine learning developers, we should be taking measures to prevent sensitive information (such as credentials or customer data) from leaking out of our projects.|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://darshancrout.ai/post/prevent-data-leakage-in-your-data-science-project/" />
+
+
+
+    <title>Prevent Data Leakage in Your Data Science Project</title>
+    <link rel="canonical" href="https://darshancrout.ai/post/prevent-data-leakage-in-your-data-science-project/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://darshancrout.ai/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-133534404-1', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="en-us"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://darshancrout.ai/" class="b bb bw1 pb1 no-underline black">Darshan Crout</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">Prevent Data Leakage in Your Data Science Project</h1>
+    <span class="f6 gray">September 20, 2019</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        
+
+<p>Data leaks happen. With the ever-growing multitude of software-based services we use in the <em>everydayness</em>, our usage of <a href="https://en.wikipedia.org/wiki/Internet_of_things">Internet of Things</a>-<em>things</em>, to the <em>ready-to-hand</em> rewards systems on our phones, our personal data is out there in the <em>world</em>. As such, our data has a greater chance of leaking and getting into places we don&rsquo;t want it to end up.</p>
+
+<p>As data scientists and machine learning developers, we should be taking measures to prevent sensitive information (such as credentials or customer data) from leaking out of our projects. When collaborating with others, we sometimes encounter shortcuts such as hard-coded keys throughout the code. Unfortunately, I&rsquo;ve seen such things in industry. It can be difficult to fix, and it could lead to others accidentally pushing sensitive information into the repo.</p>
+
+<p>Whether you&rsquo;re working on a work project or a personal one, how do you prevent leaking sensitive information? In this tutorial, we will create several files to help with data leakage. We will look at:</p>
+
+<p><strong>(tl;dr)</strong></p>
+
+<ol>
+<li><strong>Separating sensitive information like credentials using a <code>config</code> file and loading them using a <code>Config()</code> class</strong></li>
+<li><strong>Preventing sensitive information from being committed and uploaded using the <code>.gitignore</code> file</strong></li>
+<li><strong>Automating the creation of a <code>config</code> file and the removal of sensitive information using a <code>Makefile</code></strong></li>
+</ol>
+
+<p>The tips provided in this tutorial are meant as an introduction; to familiarize yourself with some best practices which you can incorporate into your own project. We will be focusing on a <code>Python</code>-based project, however you can apply these tips to whatever language you use. It also goes without saying that when working with sensitive information, you should always follow your company&rsquo;s policies and guidelines first (they might even advise against the tips in this tutorial 😜).</p>
+
+<h2 id="tip-1-configure-a-config-file">Tip #1: Configure a <code>config</code> file</h2>
+
+<p>As a data scientist, I work with data which I need to fetch from a remote server (often a SQL database), requiring me to use credentials to access that database. For my project, I could be making a script or a notebook which I would use as a proof-of-concept. One can be tempted to hard-core the credentials in the code, thinking that you can remove or mask those values before pushing to the repo.</p>
+
+<p>Now imagine the case where you would require the credentials in multiple files. You can imagine the problem of keeping track of <em>where</em> these credential variables are when having to delete or mask them.</p>
+
+<p><code>config</code> files fortunately solves this problem! Using the <a href="https://docs.python.org/3/library/configparser.html"><code>configparser</code></a> package in Python, you can keep your credentials in one single file. We can then create a class which will store these variables and then can be called in your code.</p>
+
+<p>Typically a config file will be contained in the root of your project directory. To see how this is can be done, create a file called <code>config</code> in the root of your project with your credentials. It can look something like the following:</p>
+
+<pre><code>[SQL_SERVER]
+DATABASE=my.sql.database
+USERNAME=my_username
+PASSWORD=my_password
+</code></pre>
+
+<p>Here we have credentials for the database we are fetching our data from. Next, we can create a Python class to load those credentials from the <code>config</code> file. Create a file called <code>config.py</code> with the following contents:</p>
+
+<pre><code>import configparser
+
+config = configparser.ConfigParser(&quot;./config&quot;)
+
+class Config:
+    def __init__(self):
+        self.sql_config = config[&quot;SQL_SERVER&quot;]
+        self.database = sql_config[&quot;DATABASE&quot;]
+        self.username = sql_config[&quot;USERNAME&quot;]
+        self.password = sql_config[&quot;PASSWORD&quot;]
+</code></pre>
+
+<p>So what&rsquo;s going on here? We&rsquo;ve created a new class called <code>Config()</code> to <em>hold</em> our credentials, parsing them from the <code>config</code> file. If you require your config credentials in your code now, you can load in the <code>Config()</code> class, and get the variables from there:</p>
+
+<pre><code>from config import Config
+from sql_library import connect
+
+if __name__ == &quot;__main__&quot;:
+
+# Initiate the config class
+config = Config()
+
+# Get the credentials
+uname = config.username
+pass = config.password
+
+# Use the credentials for what you need them for
+sql_connector = connect(uname, pass)
+
+# do
+# stuff
+# here
+# ...
+</code></pre>
+
+<p>You can see now our credentials are just obtained from the <code>Config()</code> class and never <em>explicitly</em> stated anywhere in the code. As your code gets more complex and the more instances of your credentials you need, you can be rest assured that your credentials won&rsquo;t be exposed explicitly in the code.</p>
+
+<p>You might have been thinking now, &ldquo;Okay, the credentials are not hard-coded, but what if I upload the config file?&rdquo; Good question! That brings us to the next tip!</p>
+
+<h2 id="tip-2-don-t-ignore-the-gitignore">Tip #2: Don&rsquo;t ignore the <code>.gitignore</code></h2>
+
+<p>When working in a Git project, the <code>.gitignore</code> file is (not surprisingly) a list of files you would like Git to <em>ignore</em>. The <code>.gitignore</code> file is typically created when you create a new Git repo, however if it&rsquo;s not present, you can create one by running:</p>
+
+<pre><code>$ touch .gitignore
+</code></pre>
+
+<p>Next, open the file using your text editor and add the name of the config file:</p>
+
+<pre><code># config files
+config
+some_file
+some_other_file
+
+# directories
+data/
+</code></pre>
+
+<p>In the code snippet above, we have the <code>config</code> file added, in addition to a directory called <code>data/</code>. The <code>.gitignore</code> file can contain files in addition to directories you don&rsquo;t want to be pushed to Git. This is handy when you have a directory for data files (of which may contain sensitive information) which you don&rsquo;t want to push to your repo.</p>
+
+<p>At this point, you&rsquo;re pretty much covered from leaking credentials or other sensitive information by accident when pushing code to Git!</p>
+
+<p>Suppose now that your code has lingering files such as output files that you want to remove every time when pushing your code. What if someone uses your code, but they need to create a <code>config</code> file? You can provide instructions on how to make a <code>config</code> file, <em>or</em> automate the process with a <code>Makefile</code>.</p>
+
+<h2 id="tip-3-make-it-happen-with-a-makefile">Tip #3: Make it happen with a <code>Makefile</code></h2>
+
+<p><a href="/post/make-life-easier-with-makefiles/">In another post of mine</a>, I talked specifically about <code>Makefiles</code>, what they are and how to use them. You can think of a <code>Makefile</code> as a file containing a set of rules or commands which can be used via the <code>make</code> command on <code>*nix</code> systems. We will look at two scenarios, create the <code>make</code> rules around those scenarios and explain how to use them.</p>
+
+<h3 id="automating-config-generation-and-removing-unwanted-files">Automating <code>config</code> generation and removing unwanted files</h3>
+
+<p>As mentioned, we would like to do two things to keep our project secured for us and other users and contributors. Specifically:</p>
+
+<ol>
+<li>We would like to remove lingering output files, cache files and/or config files.</li>
+<li>We would like to automatically create a <code>config</code> file</li>
+</ol>
+
+<p>For these two tasks, we can create a <code>Makefile</code> which contains the following code:</p>
+
+<pre><code>make clean:
+    rm -rf data/* cache_file config
+
+make config:
+    printf &quot;[SQL_SERVER]\nDATABASE=\nUSERNAME=\nPASSWORD=&quot; &gt; config
+</code></pre>
+
+<p>What we&rsquo;re doing here is creating two sets of instructions: <code>clean</code> and <code>config</code>. For each instruction, we have a series of shell commands to run whenever we call the rule. For example, running <code>$ make config</code> will crate a file called <code>config</code> and write the required fields in that file. A new contributor coming into the project can simply run this command, open the <code>config</code> file and input their credentials.</p>
+
+<p><code>Makefiles</code> make it easy for others to work with your project and to automate things such as removing lingering data and cache files.</p>
+
+<h2 id="some-other-useful-tips">Some other useful tips</h2>
+
+<p>Here are some other things to consider when working on your project:</p>
+
+<h3 id="use-git-status-be-cautious-using-git-add-a">Use <code>git status</code>; Be cautious using <code>git add -A</code></h3>
+
+<p>Always look at what you&rsquo;re committing before you commit it. You can check what files have been modified in your project by using the <code>git status</code> command. Try not to use the <code>git add -A</code> command unless you&rsquo;re sure of what you will be committing.</p>
+
+<h3 id="familiarize-yourself-with-git-s-config-command">Familiarize yourself with Git&rsquo;s <code>config</code> command</h3>
+
+<p>If you&rsquo;re using one machine for you work and personal projects, be sure to configure as well as check your <code>git config</code> in your project, specifically your <code>name</code> and <code>email</code>. You can obtain your <code>name</code> and <code>email</code> with the following commands:</p>
+
+<pre><code>$ git config user.name
+$ git config user.email
+</code></pre>
+
+<p>And you can change the values with the following:</p>
+
+<pre><code>$ git config user.name &quot;My Name&quot;
+$ git config user.email &quot;my.name@email.com&quot;
+</code></pre>
+
+<p>More information on how to configure this can be found <a href="https://help.github.com/en/articles/set-up-git">here</a>.</p>
+
+<h3 id="be-careful-of-what-values-you-re-printing-to-stdout-and-stderr">Be careful of what values you&rsquo;re printing to <code>stdout</code> and <code>stderr</code></h3>
+
+<p>If you&rsquo;re serving your model through an API on the cloud for example, you can accidentally leak data through the logs via lingering <code>print</code> statements in your code. Just be sure to mute these statements in your code, or switch to using a <a href="https://docs.python.org/3.5/library/logging.html"><code>logger</code></a>.</p>
+
+<h3 id="encrypt-sensitive-information-using-gitcrypt">Encrypt sensitive information using <code>gitcrypt</code></h3>
+
+<p>In the chance that you have to provide sensitive files in your repo, consider using a tool like <a href="https://github.com/AGWA/git-crypt"><code>gitcrypt</code></a> which can encrypt sensitive files before pushing them to Git. Perhaps I&rsquo;ll write a future post on this&hellip; 😉</p>
+
+<h2 id="be-safe-out-there">Be safe out there!</h2>
+
+<p>I hope that covers some of the basics when working with sensitive information in your data science project. In this tutorial we covered the following:</p>
+
+<ol>
+<li><strong>Separating sensitive information like credentials using a <code>config</code> file and loading them using a <code>Config()</code> class</strong></li>
+<li><strong>Preventing sensitive information from being committed and uploaded using the <code>.gitignore</code> file</strong></li>
+<li><strong>Automating the creation of a <code>config</code> file and the removal of sensitive information using a <code>Makefile</code></strong></li>
+</ol>
+
+<p>This is of course not an exhaustive list on how to make your project more secure, but I believe it is a good starting point. Incorporating these practices can save you some headaches with variable book keeping, give you some peace of mind and make your project more accessible to others!</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: September 20, 2019. Published at: 2019-09-20.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        © 2019 Darshan Crout <a href='https://twitter.com/durshmallow'>(@durshmallow)</a>. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>

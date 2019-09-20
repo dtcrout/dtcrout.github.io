@@ -7,13 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2019 Darshan Crout &lt;a href=&#39;https://twitter.com/durshmallow&#39;&gt;(@durshmallow)&lt;/a&gt;. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 28 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darshancrout.ai/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Make life easier with Makefiles</title>
+      <title>Prevent Data Leakage in Your Data Science Project</title>
+      <link>https://darshancrout.ai/post/prevent-data-leakage-in-your-data-science-project/</link>
+      <pubDate>Fri, 20 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://darshancrout.ai/post/prevent-data-leakage-in-your-data-science-project/</guid>
+      <description>Data leaks happen. With the ever-growing multitude of software-based services we use in the everydayness, our usage of Internet of Things-things, to the ready-to-hand rewards systems on our phones, our personal data is out there in the world. As such, our data has a greater chance of leaking and getting into places we don&amp;rsquo;t want it to end up.
+As data scientists and machine learning developers, we should be taking measures to prevent sensitive information (such as credentials or customer data) from leaking out of our projects.</description>
+    </item>
+    
+    <item>
+      <title>Make Life Easier with Makefiles</title>
       <link>https://darshancrout.ai/post/make-life-easier-with-makefiles/</link>
       <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
       
@@ -34,7 +44,7 @@ You go to your terminal and open the file in your text editor. The file opens an
     </item>
     
     <item>
-      <title>Generating YouTube titles using image captioning</title>
+      <title>Generating YouTube Titles Using Image Captioning</title>
       <link>https://darshancrout.ai/post/generating-youtube-titles-using-image-captioning/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
@@ -43,7 +53,7 @@ You go to your terminal and open the file in your text editor. The file opens an
     </item>
     
     <item>
-      <title>Building a site using Hugo</title>
+      <title>Building a Site Using Hugo</title>
       <link>https://darshancrout.ai/post/building-a-site-using-hugo/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
