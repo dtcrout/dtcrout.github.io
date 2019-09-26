@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2019 Darshan Crout (&lt;a href=&#39;https://twitter.com/durshmallow&#39;&gt;@durshmallow&lt;/a&gt;). All rights reserved.</copyright>
-    <lastBuildDate>Fri, 20 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darshancrout.ai/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Meditations on First Contributions</title>
+      <link>https://darshancrout.ai/post/meditations-on-first-contributions/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://darshancrout.ai/post/meditations-on-first-contributions/</guid>
+      <description>&amp;ldquo;Life moves pretty fast. If you don&amp;rsquo;t stop and look around once in a while, you could miss it.&amp;rdquo;
+In Ferris Buller&amp;rsquo;s Day Off, our young philosopher turns to the audience and tells us we should stop and take a moment to reflect on what&amp;rsquo;s going on around us. He wants us to ask ourselves: are we living authentically? &amp;hellip;And he&amp;rsquo;s right. When was the last time you took a moment to reflect on what was going on in your life?</description>
+    </item>
     
     <item>
       <title>Prevent Data Leakage in Your Data Science Project</title>
