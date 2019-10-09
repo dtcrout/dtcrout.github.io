@@ -6,7 +6,7 @@
     <description>Recent content on Darshan Crout</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2019 Darshan Crout (&lt;a href=&#39;https://twitter.com/durshmallow&#39; style=&#39;text-decoration: none&#39;&gt;@durshmallow&lt;/a&gt;). All rights reserved.</copyright>
+    <copyright>© 2019 Darshan Crout (&lt;a href=&#39;https://twitter.com/durshmallow&#39;&gt;@durshmallow&lt;/a&gt;). All rights reserved.</copyright>
     <lastBuildDate>Thu, 26 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darshancrout.ai/index.xml" rel="self" type="application/rss+xml" />
@@ -98,7 +98,7 @@ Reading 📚 Completed  White Noise, by Don DeLillo Our Band Could Be Your Life:
       
       <guid>https://darshancrout.ai/setup/</guid>
       <description>I&amp;rsquo;m interested in the gear other people use to get their work done. If you&amp;rsquo;re at all curious, here&amp;rsquo;s my personal setup:
-Lenovo ThinkPad x220 💻 The xx20 ThinkPad series is the last one to have the classical keyboard. I use this computer as my daily driver. I run Ubuntu LTS as my primary OS, switching between different window managers. For development I use tmux and Spacemacs. My dotfiles are hosted on GitHub.</description>
+MacBook Air 2019 💻 I switched to a MacBook from a ThinkPad x220 as my daily driver mainly out of convenience. For development I use tmux and Spacemacs. My dotfiles are hosted on GitHub. For additional productivity, I use the Vimium Chrome extension which brings Vim controls to the browser.</description>
     </item>
     
   </channel>
