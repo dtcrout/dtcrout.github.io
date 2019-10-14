@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2019 Darshan Crout (&lt;a href=&#39;https://twitter.com/durshmallow&#39;&gt;@durshmallow&lt;/a&gt;). All rights reserved.</copyright>
-    <lastBuildDate>Thu, 26 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darshancrout.ai/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Speed Up Your Workflow the Evil Way</title>
+      <link>https://darshancrout.ai/post/speed-up-your-workflow-the-evil-way/</link>
+      <pubDate>Sun, 13 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://darshancrout.ai/post/speed-up-your-workflow-the-evil-way/</guid>
+      <description>Like all developers, something which helps me get my work done quickly are keyboard shortcuts. Everyone is familiar with some set of shortcuts, ctrl + c, ctrl + v, and ctrl + s to name a few. These common shortcuts are quite convenient since they (typically) work across all applications on your operating system.
+But now, suppose you want to navigate trough your tabs in your web browser. Which shortcuts do you use?</description>
+    </item>
     
     <item>
       <title>Meditations on First Contributions</title>
