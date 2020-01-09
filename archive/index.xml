@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archives on Darshan Crout</title>
+    <link>https://darshancrout.ai/archive/</link>
+    <description>Recent content in Archives on Darshan Crout</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2019 Darshan Crout (&lt;a href=&#39;https://twitter.com/durshmallow&#39;&gt;@durshmallow&lt;/a&gt;). All rights reserved.</copyright>
+    
+	<atom:link href="https://darshancrout.ai/archive/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Now</title>
+      <link>https://darshancrout.ai/archive/now_2019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darshancrout.ai/archive/now_2019/</guid>
+      <description>Here&amp;rsquo;s a list of things I was up to in 2019.
+Reading 📚 Completed  Meditations, by Marcus Aurelius Capitalist Realism: Is There No Alternative?, by Mark Fisher The Birth of the Clinic, by Michel Foucault Being and Time (Part I, Division I), by Martin Heidegger White Noise, by Don DeLillo Our Band Could Be Your Life: Scenes from the American Indie Underground 1981-1991, by Michael Azerrad  Currently Reading  Tractatus Logico-Philosophicus, by Ludwig Wittgenstein On the Road, by Jack Kerouac Existentialism from Dostoevsky to Sartre: Basic Writings of Existentialism by Kaufmann, Kierkegaard, Nietzsche, Jaspers, Heidegger, and Others, by Walter Kaufmann  Paper Pile  Troubling Trends in Machine Learning Scholarship (2018) Zachary C.</description>
+    </item>
+    
+  </channel>
+</rss>
