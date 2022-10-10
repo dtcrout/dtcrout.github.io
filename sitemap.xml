@@ -1,91 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://darshancrout.ai/post/create-a-web-scraper-using-go/</loc>
+    <loc>https://dtcrout.github.io/post/create-a-web-scraper-using-go/</loc>
     <lastmod>2019-10-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/</loc>
     <lastmod>2019-10-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/post/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/post/</loc>
     <lastmod>2019-10-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/post/speed-up-your-workflow-the-evil-way/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/post/speed-up-your-workflow-the-evil-way/</loc>
     <lastmod>2019-10-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/post/meditations-on-first-contributions/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/post/meditations-on-first-contributions/</loc>
     <lastmod>2019-09-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/post/prevent-data-leakage-in-your-data-science-project/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/post/prevent-data-leakage-in-your-data-science-project/</loc>
     <lastmod>2019-09-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/post/make-life-easier-with-makefiles/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/post/make-life-easier-with-makefiles/</loc>
     <lastmod>2019-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/</loc>
     <lastmod>2019-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/post/generating-youtube-titles-using-image-captioning/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/post/generating-youtube-titles-using-image-captioning/</loc>
     <lastmod>2019-05-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/post/building-a-site-using-hugo/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/post/building-a-site-using-hugo/</loc>
     <lastmod>2019-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dtcrout.github.io/about/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/archive/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/categories/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/archive/now_2019/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/archive/now_2020/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/now/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/series/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/setup/</loc>
+  </url><url>
+    <loc>https://dtcrout.github.io/tags/</loc>
   </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/archive/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/archive/now_2019/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/archive/now_2020/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/now/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/series/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/setup/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darshancrout.ai/tags/</loc>
-  </url>
-  
 </urlset>

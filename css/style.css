@@ -28,7 +28,3 @@ code {
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-a:not([class="f3 b pa1 black"]) {
-  text-decoration: none
-}

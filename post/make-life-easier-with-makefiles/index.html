@@ -25,7 +25,7 @@
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="https://darshancrout.ai/post/make-life-easier-with-makefiles/" />
+<meta property="og:url" content="https://dtcrout.github.io/post/make-life-easier-with-makefiles/" />
 <meta property="og:locale" content="en-us" />
 <meta property="article:published_time" content="2019-08-28
 " /> <meta property="article:modified_time" content="2019-08-28
@@ -49,12 +49,12 @@ You&rsquo;re at work one day, when your boss approaches you with a peculiar task
 You go to your terminal and open the file in your text editor. The file opens and you take a quick glimpse of the code.|"
 />
 <meta name="twitter:image:src" content="" />
-<meta name="twitter:domain" content="https://darshancrout.ai/post/make-life-easier-with-makefiles/" />
+<meta name="twitter:domain" content="https://dtcrout.github.io/post/make-life-easier-with-makefiles/" />
 
 
 
     <title>Make Life Easier with Makefiles</title>
-    <link rel="canonical" href="https://darshancrout.ai/post/make-life-easier-with-makefiles/" />
+    <link rel="canonical" href="https://dtcrout.github.io/post/make-life-easier-with-makefiles/" />
 
 
     <link
@@ -62,7 +62,7 @@ You go to your terminal and open the file in your text editor. The file opens an
   href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
 />
 
-<link rel="stylesheet" href="https://darshancrout.ai/css/style.css" />
+<link rel="stylesheet" href="https://dtcrout.github.io/css/style.css" />
 
 <link
   rel="stylesheet"
@@ -103,9 +103,9 @@ if (!doNotTrack) {
   itemscope
   itemtype="http://schema.org/Article"
 >
-
+  
   <span class="b">/ </span>
-  <a href="https://darshancrout.ai/" class="b bb bw1 pb1 no-underline black">Darshan Crout</a>
+  <a href="https://dtcrout.github.io/" class="b bb bw1 pb1 no-underline black">Darshan Crout</a>
   <span class="b"> / </span>
   <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
 
@@ -114,83 +114,51 @@ if (!doNotTrack) {
     <span class="f6 gray">August 28, 2019</span>
 
       <article itemprop="articleBody" id="content" class="w-90 lh-copy">
-        
-
-<p><em>Imagine the following scenario:</em></p>
-
+        <p><em>Imagine the following scenario:</em></p>
 <p>You&rsquo;re at work one day, when your boss approaches you with a peculiar task.</p>
-
 <p>&ldquo;Open your email. I sent you a piece of code&rdquo;, he says. &ldquo;There&rsquo;s another team who wrote it and they say it takes days to run&hellip; They have no idea why though&rdquo;.</p>
-
 <p>You go to your terminal and open the file in your text editor. The file opens and you take a quick glimpse of the code. Java is known to be ugly, but this is different. Something isn&rsquo;t quite right. You can&rsquo;t help but to feel a bit disturbed.</p>
-
 <p>Glancing over the code a bit more, you realize that there are no comments. There&rsquo;s not one docstring that is in sight. All the variables and functions have generic names like <code>array1</code> or <code>x</code>. There are no references, no signals to <em>what</em> anything does, or what <em>purpose</em> they serve.</p>
-
 <p>You look more into the code and to your disbelief the author wrote their own casting function. Given a number in a string, the function checks if it&rsquo;s zero, else if it&rsquo;s one, else if it&rsquo;s two, else if it&rsquo;s three&hellip; You scroll down further and suddenly the <em>unhandiness</em> of the code shows itself.</p>
-
 <p>&ldquo;It looks like this triple nested for loop is the problem&rdquo; you tell him, pointing at the screen.</p>
-
 <p>&ldquo;Can you re-write it in Python?&rdquo; he asks.</p>
-
 <p>Don&rsquo;t we want to make the code faster? How does this solve the problem?</p>
-
 <p>&ldquo;Sure.&rdquo;</p>
-
-<hr />
-
+<hr>
 <p>I recently had to re-write legacy Java code into Python. Despite the frustrating, non-sensical task itself, I learned a lot from the process:</p>
-
 <ol>
 <li><strong>Profilers are really handy.</strong> Using profilers are really handy when you want to identify bottlenecks within your code.</li>
 <li><strong>Always create unit tests.</strong> When working only your code, having unit tests along the way will help to see if your changes have made affects anywhere else.</li>
 <li><strong>Write a Makefile for your project.</strong></li>
 </ol>
-
 <p>In this post, we will talk about Makefiles, why they&rsquo;re <em>handy</em> and how they can speed up your workflow making you a more efficient developer.</p>
-
 <h2 id="what-is-a-makefile">What is a Makefile?</h2>
-
 <p>Makefiles help you automate your development workflow, make the installation of your project simple and help standardization of working environments for other contributors. You see them when installing packages from source, or for C development, but they can be used for a lot of other things.</p>
-
 <p>In essence, they are a wrapper or an alias for commands or a series of commands. This can be very handy for example when you&rsquo;re debugging code and need to execute test cases and check those test cases every time you make a change. This is what I did when I was porting the Java code over to Python, needing to check whether or not the output remained the same after every change I made.</p>
-
 <p>I use them for just about everything now. Take my blog as another example. Whenever I come back to writing a new post, I typically don&rsquo;t have my development environment set up. I need to download my theme and I need to start up a server to preview my site locally. Because I always forget these commands I made a Makefile to make the setup easier.</p>
-
-<h2 id="how-do-i-make-a-makefile">How do I <em>make</em> a Makefile?</h2>
-
+<h2 id="how-do-i-_make_-a-makefile">How do I <em>make</em> a Makefile?</h2>
 <p>Consider the following example: you&rsquo;re developing a Python web server. When developing the application, you need a command to run the application, and another command to execute some <code>curl</code> commands to test your endpoints. The output of the <code>curl</code> command will be compared to an expected output like <code>diff</code>.</p>
-
 <p>Adding a <code>Makefile</code> in the root of the directory of your project, we can make a command to execute your Python app:</p>
-
-<pre><code>make run:
+<pre tabindex="0"><code>make run:
     python app.py
-</code></pre>
-
-<p>Typing <code>make run</code> in the terminal will simply execute the lines you&rsquo;ve assigned the alias <em>or</em> task to. In this case it will run the command <code>python app.py</code>.</p>
-
+</code></pre><p>Typing <code>make run</code> in the terminal will simply execute the lines you&rsquo;ve assigned the alias <em>or</em> task to. In this case it will run the command <code>python app.py</code>.</p>
 <p>This is a trivial example, but now what if you want to test your endpoints? Curl commands can be lengthy people typically use another piece of software like <a href="https://chrome.google.com/webstore/detail/yet-another-rest-client/ehafadccdcdedbhcbddihehiodgcddpl">Yarc</a> or <a href="https://www.getpostman.com/">Postman</a> to help you with this. But everytime you make a change to the code, you need to re-run these commands. You can see how tedious this can get. Instead, just add the test cases to the <code>Makefile</code> and then run some more commands to compare the output to a test case.</p>
-
-<pre><code>make run:
+<pre tabindex="0"><code>make run:
     python app.py
 
 make test:
     curl -X POST http://localhost:8080/my_endpoint &gt; output.txt
     diff output.txt test.txt
-</code></pre>
-
-<p>Running <code>make test</code> will execute all those lines in one command, allowing you to move back to coding or take action if differences arise. No need to switch terminals, copy/paste commands, or use other applications.</p>
-
-<h2 id="i-still-don-t-know-what-to-make-of-makefiles">I still don&rsquo;t know what to <em>make</em> of Makefiles</h2>
-
+</code></pre><p>Running <code>make test</code> will execute all those lines in one command, allowing you to move back to coding or take action if differences arise. No need to switch terminals, copy/paste commands, or use other applications.</p>
+<h2 id="i-still-dont-know-what-to-_make_-of-makefiles">I still don&rsquo;t know what to <em>make</em> of Makefiles</h2>
 <p>For a more elaborate example, take this Makefile from my <a href="https://github.com/dtcrout/spotitude">Spotitude</a> project on GitHub:</p>
-
-<pre><code># META ]------------------------------------------------------------------------
+<pre tabindex="0"><code># META ]------------------------------------------------------------------------
 help:
-	@echo &quot;test				Return status of source files.&quot;
-	@echo &quot;config				Make config file for Spotify API.&quot;
-	@echo &quot;deps				Make dependencies.&quot;
-	@echo &quot;server				Create server to view visualization.&quot;
-	@echo &quot;clean				Remove artifacts and standardize repo.&quot;
+	@echo &#34;test				Return status of source files.&#34;
+	@echo &#34;config				Make config file for Spotify API.&#34;
+	@echo &#34;deps				Make dependencies.&#34;
+	@echo &#34;server				Create server to view visualization.&#34;
+	@echo &#34;clean				Remove artifacts and standardize repo.&#34;
 
 # CORE ]------------------------------------------------------------------------
 test: deps
@@ -199,7 +167,7 @@ test: deps
 
 config:
 	touch spotitude.config &amp;&amp; \
-	printf &quot;[DEFAULT]\nUSERNAME=\nSCOPE=user-top-read playlist-modify-private\nREDIRECT_URI=http://localhost:8080\nCLIENT_ID=\nCLIENT_SECRET=&quot; &gt; spotitude.config
+	printf &#34;[DEFAULT]\nUSERNAME=\nSCOPE=user-top-read playlist-modify-private\nREDIRECT_URI=http://localhost:8080\nCLIENT_ID=\nCLIENT_SECRET=&#34; &gt; spotitude.config
 
 deps: requirements.txt
 	test -d venv || (python3 -m venv venv &amp;&amp; \
@@ -213,22 +181,13 @@ clean: deps
 	. venv/bin/activate ;\
 	black . --exclude venv &amp;&amp; \
 	rm -rf *.html *.csv .cache-* __pycache__ venv/
-</code></pre>
-
-<p>In this Makefile, we have a <code>help</code> target. Typing <code>make help</code> in the terminal will provide some documentation on what each other task in the Makefile does.</p>
-
+</code></pre><p>In this Makefile, we have a <code>help</code> target. Typing <code>make help</code> in the terminal will provide some documentation on what each other task in the Makefile does.</p>
 <p><a href="https://github.com/dtcrout/spotitude">Spotitude</a> is an open-source project. Having a Makefile included in the project makes it simple for contributors to install the dependencies (<code>make deps</code>) and standardize the repo (<code>make clean</code>).</p>
-
 <p><code>make deps</code> installs all required dependencies for the project. It will first create a Python virtual environment and install all the dependencies in that. That way when someone is contributing to the project, they will always have the same environment as everyone else. Why tell the user <em>what</em> to install through the <code>README.md</code> when all they need to do is run <code>make deps</code>!</p>
-
 <p><code>make clean</code> helps standardize and reformat the code base and removes temporary files that might be lingering. You should (try) to have contributing guides in your project, but running this command makes it easy for someone to push their commit.</p>
-
-<h2 id="make-a-change-to-your-workflow"><em>Make</em> a change to your workflow!</h2>
-
+<h2 id="_make_-a-change-to-your-workflow"><em>Make</em> a change to your workflow!</h2>
 <p>Makefiles make developing faster and much more efficient, allowing you to focus on what really matters. No longer will you have to store all your commands in a separate text file, copy and pasting them into the terminal one by one.</p>
-
 <p><a href="https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus">A whole philosophical work</a> is on how misunderstandings arise through language. Why bother telling users how to set up a project when they can just run one command with a Makefile? One command to set up everything, and they&rsquo;re already developing on your project.</p>
-
 <p>In case you were wondering with the outcome of my task, I&rsquo;ll leave it to you to figure out what happened. Porting code is a forensic endeavour and you might not get very far with re-writing everything. Documentation helps and test cases do too. Knowing just how bad it can get, I&rsquo;ll be adding test cases and Makefiles in all my projects from now on so no one has to experience the horror I experienced. Automating my testing and code profiling was very useful, just going to show how a Makefile can <em>make</em> all the difference.</p>
 
       </article>
@@ -242,31 +201,10 @@ clean: deps
 
   </section>
 
-  <article itemprop="articleBody" id="content" class="w-90 lh-copy">
-    <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'http-darshancrout-ai';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-  </article>
-
   <footer>
     <div>
       <p class="f6 gray mt6 lh-copy">
-        © 2021 Darshan Crout (<a href='https://twitter.com/durshmallow'>@durshmallow</a>). All rights reserved.
+        © 2022 Darshan Crout (<a href='https://twitter.com/durshmallow'>@durshmallow</a>). All rights reserved.
       </p>
     </div>
   </footer>
@@ -276,7 +214,6 @@ clean: deps
 <script>
   hljs.initHighlightingOnLoad();
 </script>
-
 
 
 

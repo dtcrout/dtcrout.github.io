@@ -25,7 +25,7 @@
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="https://darshancrout.ai/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/" />
+<meta property="og:url" content="https://dtcrout.github.io/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/" />
 <meta property="og:locale" content="en-us" />
 <meta property="article:published_time" content="2019-07-05
 " /> <meta property="article:modified_time" content="2019-07-05
@@ -46,12 +46,12 @@
   content="What do you do on vacation? Do you relax on a nice, hot sunny beach sipping on an ice cool drink? Do you travel across South East Asia with a loved one eating new and delicious foods? Perhaps you enjoy adventuring and hiking in the great, beautiful Swiss Alps? Or maybe you&rsquo;re more like me, someone who is at home catching up on their machine learning papers. One paper in particular caught my full attention: CNM: An Interpretable Complex-valued network for Matching by Qiuchi Li, Benyou Wang and Massimo Melucci.|"
 />
 <meta name="twitter:image:src" content="" />
-<meta name="twitter:domain" content="https://darshancrout.ai/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/" />
+<meta name="twitter:domain" content="https://dtcrout.github.io/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/" />
 
 
 
     <title>Big Trouble in Little Quanta: A critique of complex-valued networks for NLP explainability</title>
-    <link rel="canonical" href="https://darshancrout.ai/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/" />
+    <link rel="canonical" href="https://dtcrout.github.io/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/" />
 
 
     <link
@@ -59,7 +59,7 @@
   href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
 />
 
-<link rel="stylesheet" href="https://darshancrout.ai/css/style.css" />
+<link rel="stylesheet" href="https://dtcrout.github.io/css/style.css" />
 
 <link
   rel="stylesheet"
@@ -100,9 +100,9 @@ if (!doNotTrack) {
   itemscope
   itemtype="http://schema.org/Article"
 >
-
+  
   <span class="b">/ </span>
-  <a href="https://darshancrout.ai/" class="b bb bw1 pb1 no-underline black">Darshan Crout</a>
+  <a href="https://dtcrout.github.io/" class="b bb bw1 pb1 no-underline black">Darshan Crout</a>
   <span class="b"> / </span>
   <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
 
@@ -111,98 +111,51 @@ if (!doNotTrack) {
     <span class="f6 gray">July 5, 2019</span>
 
       <article itemprop="articleBody" id="content" class="w-90 lh-copy">
-        
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>What do you do on vacation? Do you relax on a nice, hot sunny beach sipping on an ice cool drink? Do you travel across South East Asia with a loved one eating new and delicious foods? Perhaps you enjoy adventuring and hiking in the great, beautiful Swiss Alps? Or maybe you&rsquo;re more like me, someone who is at home catching up on their machine learning papers. One paper in particular caught my full attention: <a href="https://arxiv.org/abs/1904.05298">CNM: An Interpretable Complex-valued network for Matching</a> by Qiuchi Li, Benyou Wang and Massimo Melucci. In the paper, the authors propose a framework to model human language by the mathematical framework of quantum physics, specifically modelling language in <a href="https://en.wikipedia.org/wiki/Hilbert_space">Hilbert space</a>. Similar to methods such as <a href="https://en.wikipedia.org/wiki/Word2vec">word2vec</a> or <a href="https://en.wikipedia.org/wiki/GloVe_(machine_learning)">GloVe</a> which model words to a real-valued vector space, words and sentences are mapped to a complex-valued vector space. What makes the paper rather interesting however is that by using complex-valued vector spaces, (the authors suggest) phase and amplitude can relate to things like <em>polarity</em>, <em>ambiguity</em> or <em>emotion</em>. Essentially the framework of quantum mechanics serves as a tool for <a href="https://en.wikipedia.org/wiki/Explainable_artificial_intelligence">explainability</a> for the problem of natural language question and answering. It even won <a href="https://naacl2019.org/blog/best-papers/">Best Explainable NLP Paper</a> at NAACL 2019.</p>
-
 <p>Having studied physics in my undergrad, I was naturally drawn to the paper. The paper suggests that Hilbert space provides a good framework for model explainability and I certainly thought this was a very interesting and novel approach. However after reading the paper, I couldn&rsquo;t help but to feel a bit mislead. I felt not only was there a misuse of ideas from quantum mechanics, but also a lack of evidence and (ironically) explanation for a framework which would be ultimately used for explainability.</p>
-
-<h2 id="what-s-the-big-deal-with-a-little-quanta">What&rsquo;s the big deal with a little quanta?</h2>
-
+<h2 id="whats-the-big-deal-with-a-little-quanta">What&rsquo;s the big deal with a little quanta?</h2>
 <p>Right off the bat, I began to feel uneasy with the author&rsquo;s analogies to quantum mechanics. I&rsquo;ve always had an avid interest in science, so naturally misrepresentation of scientific theories bother me. What do I mean by this? One famous example is the concept of <a href="https://en.wikipedia.org/wiki/Quantum_healing">quantum healing</a>, a term coined by famous author and alternative medicine advocate <a href="https://en.wikipedia.org/wiki/Deepak_Chopra">Deepak Chopra</a>. Chopra suggests that phenomena such as sudden and dramatic healing relates to quantum mechanics and consciousness. Quantum mechanics is the framework in which we describe the physics of atoms and subatomic particles, and can only be applied to such systems. Not only is Chopra&rsquo;s use of quantum mechanics incorrect, but it&rsquo;s irresponsible to make claims like these, as unsavvy readers of his work who might be ill might put trust into nonsense which has no scientific basis, hoping that it will improve their health.</p>
-
 <p>I want to make it clear that I don&rsquo;t claim to be an expert in quantum mechanics. However I believe I&rsquo;m using the proper resources and tools to help me make educated conclusions. In regards to CNM, I saw ideas that could be construed incorrectly and I felt the need to write about it.</p>
-
 <p>In the data science and machine learning community, we like to write blogs or tutorials on great new ideas, but I feel as if we don&rsquo;t write enough critical pieces. If we write about new ideas from more of a critical angle, I believe we can help cut through the noise, pushing forward the great ideas, in turn developing a healthy and trustworthy community. This is especially needed in a time when machine learning research is all the rage and new ideas and theories are put out faster than we can review them.</p>
-
 <h2 id="troubling-trends-in-exciting-times">Troubling trends in exciting times</h2>
-
 <p>After reading CNM, it was clear that there were a lot of things about the paper that bothered me. To help me identify issues within the CNM paper, I read another paper called <a href="https://arxiv.org/abs/1807.03341">Troubling Trends in Machine Learning Scholarship</a> by Zachary C. Lipton and Jabob Steinhardt. The paper describes some troubling trends they&rsquo;ve observed within the machine learning research community accompanied with some examples, in addition to proposing solutions. <a href="http://approximatelycorrect.com/2018/07/10/troubling-trends-in-machine-learning-scholarship/">Here</a> is a blog post on the paper if you want to read more. In the paper, the authors outline four common trends within machine learning papers:</p>
-
 <ul>
 <li>Failure to distinguish between explanation and speculation</li>
 <li>Failure to identify the sources of empirical gains, e.g. emphasizing unnecessary modifications to neural architectures when gains actually stem from hyper-parameter tuning</li>
 <li>Mathiness: the use of mathematics that obfuscates or impresses rather than clarifies, e.g. by confusing technical and non-technical concepts</li>
 <li>Misuse of language, e.g. by choosing terms of art with colloquial connotations or by overloading established technical terms</li>
 </ul>
-
 <p>The paper was very enlightening and I would highly recommend reading it. It should be noted that these trends are not unique to the field of machine learning. In fact, I&rsquo;ve experienced these issues in my undergrad doing applied math research. As data scientists, machine learning researchers, or those who simply have an interest in the field, we should put some onus on ourselves to be critical of what we read. I understand though in a field like machine learning where new research is coming out at a great rate, we can sometimes mistake the rate of work being developed as actual progress in the field. To quote computer scientist Drew McDermott on the field of AI research [3]:</p>
-
-<p><center><em>&ldquo;If we can&rsquo;t criticize ourselves, someone else will save us the trouble.&rdquo;</em></center></p>
-
+<!-- raw HTML omitted -->
 <h3 id="explanation-vs-speculation">Explanation vs Speculation</h3>
-
 <p>In the Abstract of the paper [1], the authors state that &ldquo;with well-contsrained complex-valued components, the network admits interpretations to explicit physical meanings&rdquo;. What does the author mean about <em>explicit physical meanings</em>? The authors are talking about the components of the complex values, i.e. amplitude and phase. They elaborate further in the introduction, stating that amplitudes correspond to the <em>lexical meaning</em> and the phases implicitly reflect the higher-level semantic aspects such as <em>polarity</em>, <em>ambiguity</em> or <em>emotion</em>.</p>
-
 <p>In the paper however, there are no tests or experiments to back up these bold claims. The authors return to the explanation of complex phase and amplitude in Section 6.3 in the Discussion. In this section however, the authors still propose no evidence to suggest how complex phase can represent higher level aspects such as polarity, ambiguity or emotion nor how amplitudes can represent lexical meanings. Instead the authors only go into the mathematical definition of phase and amplitude for a complex number.</p>
-
 <p>This claim is passed off as if it is intuitively obvious. For a model and framework which purpose is for explainability, there&rsquo;s a lack of explanation for these ideas.</p>
-
 <h3 id="mathiness">Mathiness</h3>
-
 <p>Using Hilbert spaces for machine learning is certainly novel and exotic and I can&rsquo;t help but to see it&rsquo;s <em>only</em> that. I believe that there is a misunderstanding between the mathematical framework in which the authors are using and the <em>actual</em> physics which the mathematical framework was developed for. For example, just because you can apply Hilbert spaces to your problem, it doesn&rsquo;t mean your system exhibits any quantum behaviour. It&rsquo;s like saying that your system exhibits relativistic properties because you use <a href="https://en.wikipedia.org/wiki/Einstein_notation">Einstein notation</a>.</p>
-
 <p>This isn&rsquo;t to say that you can&rsquo;t use Hilbert spaces or complex number spaces for your problem, but by carrying around the quantum mechanics jargon which comes with it, readers might have an issue distinguishing the two.</p>
-
 <p>It&rsquo;s certainly impressive to see <a href="https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation">Bra-ket notation</a> throughout the paper, especially to those who have little to no familiarity with quantum mechanics. However bra-ket notation is simply a <em>convenience</em> in notation rather than a new type of mathematics. To put it simply, it&rsquo;s another notation for linear algebra and formulas stated in the paper are simply standard mathematical definitions of linear algebra: dot-products or matrix products with a &ldquo;different skin&rdquo;. I feel as if the use of bra-ket notation is more to attract the reader, to give the perception of technical depth rather to serve an actual purpose.</p>
-
-<!-- As an example, let's take the definition of measuring a state $\rho$: -->
-
-<!-- \\[p_x(\rho) = \< x \| \rho \| x \> \\]
-
-Remember thought that _bra_ and _ket_ vectors are _just_ vectors. What this equation is saying we're taking the projection of two vectors. Using more conventional notation found in common linear algebra litterature, we can re-write this equation as
-
-\\[ p_x(\rho) = \vec{x} \cdot \rho \vec{x} \\]
-
-<center>or</center>
-
-\\[ p_x(\rho) = \textbf{x}^T \rho \textbf{x} \\] -->
-
-<!-- Physicists use different notation as a matter of convenience. When we simply change the notation, all of a sudden things become more standard and (unfortunately) less impressive. -->
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="misuse-of-language">Misuse of Language</h3>
-
 <p>I believe that the paper misuses the language and concepts of quantum mechanics to justify the use of complex-valued spaces. In the Introduction [1], the authors state: &ldquo;Intuitively, a sentence can be treated as a physical system with multiple words (like particles), and these words are usually polysemous (superposed) and correlated (entangled) with each other.&rdquo;</p>
-
 <p>Let&rsquo;s take a moment to think about this statement. How are words or sentences in the linguistic sense analogous to <em>physical</em> particles like electrons? Similar to explanations from Deepak Chopra, the use of quantum mechanics is abused to fit a particular narrative. Quantum mechanics is simply used to explain physics of particles which are on the quantum scale. Making analogies like these are far-fetched and flat-out unreasonable. By using language to explain quantum physics, it implies that words exhibit quantum phenomena.</p>
-
 <p>Again, I believe it&rsquo;s fine to propose a framework which uses a complex-valued vector space, but it seems as if there is a blending between the mathematical framework which is used and a physics which share that mathematical framework.</p>
-
 <p>The authors even state in the Introduction how &ldquo;complex values are crucial in the mathematical framework of characterizing quantum physics. [Therefore] to preserve physical properties, the linguistic units have to be represented as complex vectors or matrices&rdquo;. The issue is that linguistics is not a <em>physical</em> property nor is it quantum, so why does it <em>need</em> to preserve physical properties?</p>
-
 <p>In defence of the authors, they reference two papers which suggest that human-cognition and language understanding exhibit quantum-like phenomena [4], [5], but I still believe it&rsquo;s a stretch to relate the cognitive science ideas of &ldquo;consciousness&rdquo; with a mathematical framework to model language.</p>
-
 <h2 id="final-remarks">Final remarks</h2>
-
 <p>I do appreciate the author&rsquo;s efforts in trying to create a tool for explainability. However in CNMs, there was too much of a focus on <em>how well</em> the model worked compared to current methods instead of explainability: <em>why did it work</em>? We&rsquo;re drawn to the fancy and exotic bra-ket notation and the allure of quantum mechanics, taking our attention away from the real issues of the paper. Does it really make sense for language to behave as a system of elementary particles? What evidence do the authors provide to support such a claim?</p>
-
 <p>Perhaps the use of complex vector spaces can be useful in that pursuit of explainability. Instead of complex numbers, maybe <a href="https://en.wikipedia.org/wiki/Quaternion">quaternions</a> or <a href="https://en.wikipedia.org/wiki/Dual_number">dual numbers</a> can help. As fancy as these things are, they are just mathematical frameworks. Quantum mechanics use Hilbert spaces to explain the physics, but that&rsquo;s all CNMs and quantum mechanics have in common: <em>the math</em>.</p>
-
-<hr />
-
+<hr>
 <h3 id="references">References</h3>
-
 <p>[1] <a href="https://arxiv.org/abs/1904.05298">CNM: An Interpretable Complex-valued network for Matching by Qiuchi Li, Benyou Wang and Massimo Melucci (2019)</a></p>
-
 <p>[2] <a href="https://arxiv.org/abs/1807.03341">Troubling Trends in Machine Learning Scholarship by Zachary C. Lipton and Jabob Steinhardt (2018)</a></p>
-
 <p>[3] <a href="http://www.cs.yorku.ca/~jarek/courses/ai/F11/naturalstupidity.pdf">Artificial Intelligence Meets Natural Stupidity by Drew McDermott (1976)</a></p>
-
 <p>[4] <a href="https://arxiv.org/abs/1302.3831">Quantum Entanglement in Concept Combinations by Diederik Aerts and Sandro Sozzo (2013)</a></p>
-
 <p>[5] <a href="http://www.users.on.net/~kirsty.kitto/papers/qmWordExperiments.pdf">Entangling Words and Meaning by Peter Bruza, Kirsty Kitto, Douglas Nelson and Cathy McEvoy (2008)</a></p>
 
       </article>
@@ -216,31 +169,10 @@ Remember thought that _bra_ and _ket_ vectors are _just_ vectors. What this equa
 
   </section>
 
-  <article itemprop="articleBody" id="content" class="w-90 lh-copy">
-    <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'http-darshancrout-ai';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-  </article>
-
   <footer>
     <div>
       <p class="f6 gray mt6 lh-copy">
-        © 2021 Darshan Crout (<a href='https://twitter.com/durshmallow'>@durshmallow</a>). All rights reserved.
+        © 2022 Darshan Crout (<a href='https://twitter.com/durshmallow'>@durshmallow</a>). All rights reserved.
       </p>
     </div>
   </footer>
@@ -250,7 +182,6 @@ Remember thought that _bra_ and _ket_ vectors are _just_ vectors. What this equa
 <script>
   hljs.initHighlightingOnLoad();
 </script>
-
 
 
 

@@ -1,62 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Darshan Crout</title>
-    <link>https://darshancrout.ai/</link>
+    <link>https://dtcrout.github.io/</link>
     <description>Recent content on Darshan Crout</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2021 Darshan Crout (&lt;a href=&#39;https://twitter.com/durshmallow&#39;&gt;@durshmallow&lt;/a&gt;). All rights reserved.</copyright>
-    <lastBuildDate>Tue, 22 Oct 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://darshancrout.ai/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>© 2022 Darshan Crout (&lt;a href=&#39;https://twitter.com/durshmallow&#39;&gt;@durshmallow&lt;/a&gt;). All rights reserved.</copyright>
+    <lastBuildDate>Tue, 22 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://dtcrout.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create a Web Scraper Using Go</title>
-      <link>https://darshancrout.ai/post/create-a-web-scraper-using-go/</link>
+      <link>https://dtcrout.github.io/post/create-a-web-scraper-using-go/</link>
       <pubDate>Tue, 22 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/post/create-a-web-scraper-using-go/</guid>
+      <guid>https://dtcrout.github.io/post/create-a-web-scraper-using-go/</guid>
       <description>Web scraping holds a dear place in my heart. During my undergrad, I had the opportunity to present some research at the Canadian Undergraduate Math Conference, that being numerical solutions to biological aggregation differential equations [1]. In other words, I simulated animal and insect swarming behaviour and presented some visualizations [2]. Going to that conference changed my life as it exposed me to Python and web scraping, which eventually led me to the path of data science and machine learning.</description>
     </item>
     
     <item>
       <title>Speed Up Your Workflow the Evil Way</title>
-      <link>https://darshancrout.ai/post/speed-up-your-workflow-the-evil-way/</link>
+      <link>https://dtcrout.github.io/post/speed-up-your-workflow-the-evil-way/</link>
       <pubDate>Sun, 13 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/post/speed-up-your-workflow-the-evil-way/</guid>
+      <guid>https://dtcrout.github.io/post/speed-up-your-workflow-the-evil-way/</guid>
       <description>Like all developers, something which helps me get my work done quickly are keyboard shortcuts. Everyone is familiar with some set of shortcuts, ctrl + c, ctrl + v, and ctrl + s to name a few. These common shortcuts are quite convenient since they (typically) work across all applications on your operating system.
 But now, suppose you want to navigate trough your tabs in your web browser. Which shortcuts do you use?</description>
     </item>
     
     <item>
       <title>Meditations on First Contributions</title>
-      <link>https://darshancrout.ai/post/meditations-on-first-contributions/</link>
+      <link>https://dtcrout.github.io/post/meditations-on-first-contributions/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/post/meditations-on-first-contributions/</guid>
-      <description>&amp;ldquo;Life moves pretty fast. If you don&amp;rsquo;t stop and look around once in a while, you could miss it.&amp;rdquo;
-In Ferris Buller&amp;rsquo;s Day Off, our young philosopher turns to the audience and tells us we should stop and take a moment to reflect on what&amp;rsquo;s going on around us. He wants us to ask ourselves: are we living authentically? &amp;hellip;And he&amp;rsquo;s right. When was the last time you took a moment to reflect on what was going on in your life?</description>
+      <guid>https://dtcrout.github.io/post/meditations-on-first-contributions/</guid>
+      <description>In Ferris Buller&amp;rsquo;s Day Off, our young philosopher turns to the audience and tells us we should stop and take a moment to reflect on what&amp;rsquo;s going on around us. He wants us to ask ourselves: are we living authentically? &amp;hellip;And he&amp;rsquo;s right. When was the last time you took a moment to reflect on what was going on in your life? Are you becoming the best version of yourself?</description>
     </item>
     
     <item>
       <title>Prevent Data Leakage in Your Data Science Project</title>
-      <link>https://darshancrout.ai/post/prevent-data-leakage-in-your-data-science-project/</link>
+      <link>https://dtcrout.github.io/post/prevent-data-leakage-in-your-data-science-project/</link>
       <pubDate>Fri, 20 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/post/prevent-data-leakage-in-your-data-science-project/</guid>
+      <guid>https://dtcrout.github.io/post/prevent-data-leakage-in-your-data-science-project/</guid>
       <description>Data leaks happen. With the ever-growing multitude of software-based services we use in the everydayness, our usage of Internet of Things-things, to the ready-to-hand rewards systems on our phones, our personal data is out there in the world. As such, our data has a greater chance of leaking and getting into places we don&amp;rsquo;t want it to end up.
 As data scientists and machine learning developers, we should be taking measures to prevent sensitive information (such as credentials or customer data) from leaking out of our projects.</description>
     </item>
     
     <item>
       <title>Make Life Easier with Makefiles</title>
-      <link>https://darshancrout.ai/post/make-life-easier-with-makefiles/</link>
+      <link>https://dtcrout.github.io/post/make-life-easier-with-makefiles/</link>
       <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/post/make-life-easier-with-makefiles/</guid>
+      <guid>https://dtcrout.github.io/post/make-life-easier-with-makefiles/</guid>
       <description>Imagine the following scenario:
 You&amp;rsquo;re at work one day, when your boss approaches you with a peculiar task.
 &amp;ldquo;Open your email. I sent you a piece of code&amp;rdquo;, he says. &amp;ldquo;There&amp;rsquo;s another team who wrote it and they say it takes days to run&amp;hellip; They have no idea why though&amp;rdquo;.
@@ -65,37 +60,37 @@ You go to your terminal and open the file in your text editor. The file opens an
     
     <item>
       <title>Big Trouble in Little Quanta: A critique of complex-valued networks for NLP explainability</title>
-      <link>https://darshancrout.ai/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/</link>
+      <link>https://dtcrout.github.io/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/</link>
       <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/</guid>
+      <guid>https://dtcrout.github.io/post/big-trouble-in-little-quanta-a-critique-of-complex-valued-networks-for-nlp-explainability/</guid>
       <description>What do you do on vacation? Do you relax on a nice, hot sunny beach sipping on an ice cool drink? Do you travel across South East Asia with a loved one eating new and delicious foods? Perhaps you enjoy adventuring and hiking in the great, beautiful Swiss Alps? Or maybe you&amp;rsquo;re more like me, someone who is at home catching up on their machine learning papers. One paper in particular caught my full attention: CNM: An Interpretable Complex-valued network for Matching by Qiuchi Li, Benyou Wang and Massimo Melucci.</description>
     </item>
     
     <item>
       <title>Generating YouTube Titles Using Image Captioning</title>
-      <link>https://darshancrout.ai/post/generating-youtube-titles-using-image-captioning/</link>
+      <link>https://dtcrout.github.io/post/generating-youtube-titles-using-image-captioning/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/post/generating-youtube-titles-using-image-captioning/</guid>
+      <guid>https://dtcrout.github.io/post/generating-youtube-titles-using-image-captioning/</guid>
       <description>I watch a lot of YouTube. In fact, a lot of younger people watch more YouTube than they watch television. If you&amp;rsquo;re like me, YouTube is not only an endless source of entertainment, but it also serves as a source of knowledge and information. The platform has videos on just about anything from how to make your own fermented food, cracking the Sega Saturn or Joe Rogan interviewing himself. However, if you have been on the platform for as long as I have, you have probably caught on by now just how much clickbait YouTube creators use.</description>
     </item>
     
     <item>
       <title>Building a Site Using Hugo</title>
-      <link>https://darshancrout.ai/post/building-a-site-using-hugo/</link>
+      <link>https://dtcrout.github.io/post/building-a-site-using-hugo/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/post/building-a-site-using-hugo/</guid>
+      <guid>https://dtcrout.github.io/post/building-a-site-using-hugo/</guid>
       <description>As of late, I&amp;rsquo;ve been getting interested in software philosophies such as the Unix philosophy and Suckless, hoping that they will provide me with some guidance on how to become a better programmer. I&amp;rsquo;ve also been wanting to redo my personal blog for quite some time, but never did because I would always get bogged down on choosing a theme. While browsing for site themes, I came across Simple Hugo Theme which is a Hugo theme inspired by http://bettermotherfuckingwebsite.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://darshancrout.ai/about/</link>
+      <link>https://dtcrout.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/about/</guid>
+      <guid>https://dtcrout.github.io/about/</guid>
       <description>Hello, my name is Darshan! 👋
 I&amp;rsquo;m currently a data scientist at CBC/Radio-Canada based in Toronto, Ontario. Previously I worked as a data scientist at Scotiabank. I have a MSc in Computer Science and BSc in Physics.
 During my undergrad, I got involved in mathematical models for biological aggregation and opinion dynamics in which I solved differential equations using Monte Carlo methods. This got me interested in big data problems in addition to the field of machine learning.</description>
@@ -103,40 +98,40 @@ During my undergrad, I got involved in mathematical models for biological aggreg
     
     <item>
       <title>Now</title>
-      <link>https://darshancrout.ai/archive/now_2019/</link>
+      <link>https://dtcrout.github.io/archive/now_2019/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/archive/now_2019/</guid>
+      <guid>https://dtcrout.github.io/archive/now_2019/</guid>
       <description>Here&amp;rsquo;s a list of things I was up to in 2019.
-Reading 📚 Completed  Meditations, by Marcus Aurelius Capitalist Realism: Is There No Alternative?, by Mark Fisher The Birth of the Clinic, by Michel Foucault Being and Time (Part I, Division I), by Martin Heidegger White Noise, by Don DeLillo Our Band Could Be Your Life: Scenes from the American Indie Underground 1981-1991, by Michael Azerrad  Currently Reading  Tractatus Logico-Philosophicus, by Ludwig Wittgenstein On the Road, by Jack Kerouac Existentialism from Dostoevsky to Sartre: Basic Writings of Existentialism by Kaufmann, Kierkegaard, Nietzsche, Jaspers, Heidegger, and Others, by Walter Kaufmann  Paper Pile  Troubling Trends in Machine Learning Scholarship (2018) Zachary C.</description>
+Reading 📚 Completed Meditations, by Marcus Aurelius Capitalist Realism: Is There No Alternative?, by Mark Fisher The Birth of the Clinic, by Michel Foucault Being and Time (Part I, Division I), by Martin Heidegger White Noise, by Don DeLillo Our Band Could Be Your Life: Scenes from the American Indie Underground 1981-1991, by Michael Azerrad Currently Reading Tractatus Logico-Philosophicus, by Ludwig Wittgenstein On the Road, by Jack Kerouac Existentialism from Dostoevsky to Sartre: Basic Writings of Existentialism by Kaufmann, Kierkegaard, Nietzsche, Jaspers, Heidegger, and Others, by Walter Kaufmann Paper Pile Troubling Trends in Machine Learning Scholarship (2018) Zachary C.</description>
     </item>
     
     <item>
       <title>Now</title>
-      <link>https://darshancrout.ai/archive/now_2020/</link>
+      <link>https://dtcrout.github.io/archive/now_2020/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/archive/now_2020/</guid>
+      <guid>https://dtcrout.github.io/archive/now_2020/</guid>
       <description>Here&amp;rsquo;s a list of things I was up to in 2020.
-Reading 📚 Completed  Women, Race and Class, by Angela Davis Big Sur, by Jack Kerouac The Prince, by Niccolò Machiavelli The Dharma Bums, by Jack Kerouac Nineteen Eighty-Four, by George Orwell On the Road, by Jack Kerouac The Old Man and the Sea, by Ernest Hemingway L&amp;rsquo;étranger, by Albert Camus Black Skin, White Masks, by Frantz Fanon  Currently Reading  Journey to the End of the Night, by Louis-Ferdinand Céline Being and Time, by Martin Heidegger The World as Will and Representation, Vol.</description>
+Reading 📚 Completed Women, Race and Class, by Angela Davis Big Sur, by Jack Kerouac The Prince, by Niccolò Machiavelli The Dharma Bums, by Jack Kerouac Nineteen Eighty-Four, by George Orwell On the Road, by Jack Kerouac The Old Man and the Sea, by Ernest Hemingway L&amp;rsquo;étranger, by Albert Camus Black Skin, White Masks, by Frantz Fanon Currently Reading Journey to the End of the Night, by Louis-Ferdinand Céline Being and Time, by Martin Heidegger The World as Will and Representation, Vol.</description>
     </item>
     
     <item>
       <title>Now</title>
-      <link>https://darshancrout.ai/now/</link>
+      <link>https://dtcrout.github.io/now/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/now/</guid>
+      <guid>https://dtcrout.github.io/now/</guid>
       <description>Here&amp;rsquo;s a list of things I&amp;rsquo;ve been up to, from what I&amp;rsquo;m reading to what projects I&amp;rsquo;m working on.
-Reading 📚 Currently Reading  Are Prisons Obsolete?, by Angela Davis  Archive 💾 2020 / 2019</description>
+Reading 📚 Currently Reading Are Prisons Obsolete?, by Angela Davis Archive 💾 2020 / 2019</description>
     </item>
     
     <item>
       <title>Setup</title>
-      <link>https://darshancrout.ai/setup/</link>
+      <link>https://dtcrout.github.io/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darshancrout.ai/setup/</guid>
+      <guid>https://dtcrout.github.io/setup/</guid>
       <description>I&amp;rsquo;m interested in the gear other people use to get their work done. If you&amp;rsquo;re at all curious, here&amp;rsquo;s my personal setup:
 MacBook Air 2019 💻 I switched to a MacBook from a ThinkPad x220 as my daily driver mainly out of convenience. For development I use tmux and Spacemacs. My dotfiles are hosted on GitHub. For additional productivity, I use the Vimium Chrome extension which brings Vim controls to the browser.</description>
     </item>

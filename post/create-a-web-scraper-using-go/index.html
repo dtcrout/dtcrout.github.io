@@ -25,7 +25,7 @@
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="https://darshancrout.ai/post/create-a-web-scraper-using-go/" />
+<meta property="og:url" content="https://dtcrout.github.io/post/create-a-web-scraper-using-go/" />
 <meta property="og:locale" content="en-us" />
 <meta property="article:published_time" content="2019-10-22
 " /> <meta property="article:modified_time" content="2019-10-22
@@ -46,12 +46,12 @@
   content="Web scraping holds a dear place in my heart. During my undergrad, I had the opportunity to present some research at the Canadian Undergraduate Math Conference, that being numerical solutions to biological aggregation differential equations [1]. In other words, I simulated animal and insect swarming behaviour and presented some visualizations [2]. Going to that conference changed my life as it exposed me to Python and web scraping, which eventually led me to the path of data science and machine learning.|"
 />
 <meta name="twitter:image:src" content="" />
-<meta name="twitter:domain" content="https://darshancrout.ai/post/create-a-web-scraper-using-go/" />
+<meta name="twitter:domain" content="https://dtcrout.github.io/post/create-a-web-scraper-using-go/" />
 
 
 
     <title>Create a Web Scraper Using Go</title>
-    <link rel="canonical" href="https://darshancrout.ai/post/create-a-web-scraper-using-go/" />
+    <link rel="canonical" href="https://dtcrout.github.io/post/create-a-web-scraper-using-go/" />
 
 
     <link
@@ -59,7 +59,7 @@
   href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
 />
 
-<link rel="stylesheet" href="https://darshancrout.ai/css/style.css" />
+<link rel="stylesheet" href="https://dtcrout.github.io/css/style.css" />
 
 <link
   rel="stylesheet"
@@ -100,9 +100,9 @@ if (!doNotTrack) {
   itemscope
   itemtype="http://schema.org/Article"
 >
-
+  
   <span class="b">/ </span>
-  <a href="https://darshancrout.ai/" class="b bb bw1 pb1 no-underline black">Darshan Crout</a>
+  <a href="https://dtcrout.github.io/" class="b bb bw1 pb1 no-underline black">Darshan Crout</a>
   <span class="b"> / </span>
   <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
 
@@ -111,87 +111,51 @@ if (!doNotTrack) {
     <span class="f6 gray">October 22, 2019</span>
 
       <article itemprop="articleBody" id="content" class="w-90 lh-copy">
-        
-
-<p><center><img src="/post/images/go_web_scrapper/Golang.png" alt="drawing" width="800"/></center></p>
-
+        <!-- raw HTML omitted -->
 <p><em>Web scraping holds a dear place in my heart</em>. During my undergrad, I had the opportunity to present some research at the <a href="https://cumc.math.ca/">Canadian Undergraduate Math Conference</a>, that being numerical solutions to biological aggregation differential equations [1]. In other words, I simulated animal and insect swarming behaviour and presented some visualizations [2]. Going to that conference changed my life as it exposed me to <a href="https://www.python.org/">Python</a> and <a href="https://en.wikipedia.org/wiki/Web_scraping">web scraping</a>, which eventually led me to the path of data science and machine learning.</p>
-
 <p>The math conference was held at the same time as the <a href="http://www.cucsc.ca/">computer science conference</a>, so I had the chance to sit in on some neat machine learning talks. One talk in particular which amazed me was on sports analytics. It wasn&rsquo;t the analytics that amazed me, more so it was the student who scraped the data from the web himself. I didn&rsquo;t know you could do such a thing [3], so after the talk I asked him how he did it. He dropped some names that would eventually send me down the <em>gopher</em> hole:</p>
-
-<p><center>&ldquo;Use <a href="https://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> and Python!&rdquo;</center></p>
-
+<!-- raw HTML omitted -->
 <p>Wanting to learn more, I googled <em>how to web scrape</em> and I came across Greg Reda&rsquo;s post on <a href="http://www.gregreda.com/2013/03/03/web-scraping-101-with-python/">using Python for web scraping</a>. His posts helped me create my own web scraper using Python and it was my very first experience with the language itself. I owe it to both the helpful individual at the conference and Greg Reda, as they were in my life at the right time.</p>
-
 <p>On my journey towards learning a new language this year, I&rsquo;m keeping up with tradition by creating a web scraper using <a href="https://golang.org/">Go</a> (or Golang). Like those individuals who have helped me before, I want to do the same by writing a post about making it. In this post, I will show you how to make a simple web scraper using Go. We will be scrapping the <a href="https://en.wikipedia.org/wiki/The_Pitchfork_500">Pitchfork 500</a> which is a list of alternative, punk, electronic and hip-hop songs from 1977 to 2006, and saving those tracks to a CSV file. Our web scraper will involve the following steps:</p>
-
 <ol>
 <li><strong>Get the Go app running (a.k.a the &ldquo;Hello, world!&rdquo;)</strong></li>
 <li><strong>Get the HTML from the page</strong></li>
 <li><strong>Parse the tracks from the HTML using <a href="https://github.com/PuerkitoBio/goquery">Goquery</a></strong></li>
 <li><strong>Save the data to a CSV</strong></li>
 </ol>
-
 <p>One thing to keep in mind when creating a web scraper is to research the site&rsquo;s policy on data gathering and to follow those guidelines. This tutorial will be aimed towards those who are familiar with Python but who want to learn Go. The source code used in this tutorial can be found on <a href="https://github.com/dtcrout/pitchfork-500-scraper">GitHub</a>.</p>
-
-<h2 id="go-install-go">$ go install go</h2>
-
+<h2 id="-go-install-go">$ go install go</h2>
 <p>Let&rsquo;s begin by first installing Go! You can check if you have it installed on your system by running <code>which go</code> in the terminal. If a path is returned you have it installed already.</p>
-
 <p>If you don&rsquo;t have Go installed, you can grab it from the main site <a href="https://golang.org/dl/">here</a>. A simpler way to install it, if you are using a <a href="https://en.wikipedia.org/wiki/Unix-like">*nix</a> based system, would be to use your OS&rsquo; package manager (e.g. <a href="https://wiki.debian.org/Apt">apt</a> for <a href="https://www.debian.org/">Debian</a>/<a href="https://ubuntu.com/">Ubuntu</a> or <a href="https://brew.sh/">Homebrew</a> for macOS). Using a package manager keeps the installation to one line and it will automatically configure everything. For example in macOS, you can install Go by running:</p>
-
-<pre><code>$ brew install go
-</code></pre>
-
-<p>Once Go has been installed, it&rsquo;s time to make the app.</p>
-
+<pre tabindex="0"><code>$ brew install go
+</code></pre><p>Once Go has been installed, it&rsquo;s time to make the app.</p>
 <h2 id="hello-world">Hello, World!</h2>
-
 <p>Create a directory for your scraper called (not surprisingly) <code>scraper</code>. Inside the folder, create two files:</p>
-
-<pre><code>scraper
+<pre tabindex="0"><code>scraper
 ├── Makefile
 └── main.go
-</code></pre>
-
-<p><code>main.go</code> will hold our scraper code. <code>Makefile</code> will hold command shortcuts which will make running and debugging your code easier. To learn more, see my <a href="/post/make-life-easier-with-makefiles">post</a> on Makefiles.</p>
-
+</code></pre><p><code>main.go</code> will hold our scraper code. <code>Makefile</code> will hold command shortcuts which will make running and debugging your code easier. To learn more, see my <a href="/post/make-life-easier-with-makefiles">post</a> on Makefiles.</p>
 <p>Inside <code>main.go</code>, add the following:</p>
-
-<pre><code>package main
+<pre tabindex="0"><code>package main
 
 import fmt
 
 func main() {
-        // Print &quot;Hello, world!&quot; to the terminal
-        fmt.Println(&quot;Hello, world!&quot;)
+        // Print &#34;Hello, world!&#34; to the terminal
+        fmt.Println(&#34;Hello, world!&#34;)
 }
-</code></pre>
-
-<p>What&rsquo;s shown here is typical boilerplate for a Go app. In our <code>main()</code> function, we are calling the <code>Println</code> method from the <a href="https://golang.org/pkg/fmt/">fmt</a> library and printing the string <code>Hello, World</code> from the terminal. To run this code in the terminal, use the command:</p>
-
-<pre><code>$ go run main.go
-</code></pre>
-
-<p>If all is well, you should see <code>&quot;Hello, world!&quot;</code> printed in the terminal!</p>
-
+</code></pre><p>What&rsquo;s shown here is typical boilerplate for a Go app. In our <code>main()</code> function, we are calling the <code>Println</code> method from the <a href="https://golang.org/pkg/fmt/">fmt</a> library and printing the string <code>Hello, World</code> from the terminal. To run this code in the terminal, use the command:</p>
+<pre tabindex="0"><code>$ go run main.go
+</code></pre><p>If all is well, you should see <code>&quot;Hello, world!&quot;</code> printed in the terminal!</p>
 <h3 id="type-less-code-more">Type less, code more!</h3>
-
 <p>This will make more sense later on in the tutorial, but to avoid typing this long command into the terminal I would suggest using the <code>Makefile</code> and adding that command as the default instruction. In the <code>Makefile</code>, add the following:</p>
-
-<pre><code>make:
+<pre tabindex="0"><code>make:
     go run main.go
-</code></pre>
-
-<p>Running <code>make</code> in the terminal will now run the code.</p>
-
+</code></pre><p>Running <code>make</code> in the terminal will now run the code.</p>
 <h2 id="get-html-from-the-page">Get HTML from the page</h2>
-
 <p>One thing that makes Go unique compared to Python is its native <a href="https://golang.org/pkg/net/http/">http</a> library. This library allows you to make http requests, build <a href="https://en.wikipedia.org/wiki/Unix-like">REST</a> apis and other fun internet stuff. Compare this to Python where you need to use external libraries like <a href="https://requests.kennethreitz.org/en/master/">requests</a> or <a href="https://www.fullstackpython.com/flask.html">Flask</a> to build these things.</p>
-
 <p>Create a function called <code>MakeRequest()</code>:</p>
-
-<pre><code>func MakeRequest(url string) str {
+<pre tabindex="0"><code>func MakeRequest(url string) str {
         // Make Get request to a url
         resp, _ := http.Get(url)
 
@@ -203,17 +167,13 @@ func main() {
 
         return string(body)
 }
-</code></pre>
-
-<p><code>MakeRequest()</code> takes in a URL, grabs the HTML from the URL using a <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods">GET</a> method, and returns the HTML back as a string. Some things that stand out if you&rsquo;re only familiar with Python are the <code>_</code>&rsquo;s and the manipulation of response <code>resp</code>. The <code>Get()</code> method returns two outputs, the response and an error. If we&rsquo;re calling this method, we need to assign the outputs to two variables, however we&rsquo;re not interested in the error [4]. In Go, we&rsquo;re not allowed to declare <em>unused</em> variables, therefore the <code>_</code> is used to indicate to the compiler to <em>discard</em> that output. As for the response, we need to first close our request, read the request to a byte array, then convert that byte array to a string.</p>
-
+</code></pre><p><code>MakeRequest()</code> takes in a URL, grabs the HTML from the URL using a <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods">GET</a> method, and returns the HTML back as a string. Some things that stand out if you&rsquo;re only familiar with Python are the <code>_</code>&rsquo;s and the manipulation of response <code>resp</code>. The <code>Get()</code> method returns two outputs, the response and an error. If we&rsquo;re calling this method, we need to assign the outputs to two variables, however we&rsquo;re not interested in the error [4]. In Go, we&rsquo;re not allowed to declare <em>unused</em> variables, therefore the <code>_</code> is used to indicate to the compiler to <em>discard</em> that output. As for the response, we need to first close our request, read the request to a byte array, then convert that byte array to a string.</p>
 <p>Adding this method to our code, importing the libraries and adding the URL, we have the following:</p>
-
-<pre><code>package main
+<pre tabindex="0"><code>package main
 
 import (
-        &quot;fmt&quot;
-        &quot;io/ioutil&quot;
+        &#34;fmt&#34;
+        &#34;io/ioutil&#34;
 )
 
 func MakeRequest(url string) str {
@@ -231,7 +191,7 @@ func MakeRequest(url string) str {
 
 func main() {
         // The Pitchfork 500 wiki page url
-        url := &quot;https://en.wikipedia.org/wiki/The_Pitchfork_500&quot;
+        url := &#34;https://en.wikipedia.org/wiki/The_Pitchfork_500&#34;
 
         // Get the HTML from the URL
         body := MakeRequest(url)
@@ -239,23 +199,14 @@ func main() {
         // Print the HTML to the terminal
         fmt.Println(body)
 }
-</code></pre>
-
-<p>If you run this code now (remember use <code>make</code> instead of <code>go run main.go</code>), you should see the HTML dumped to the terminal.</p>
-
+</code></pre><p>If you run this code now (remember use <code>make</code> instead of <code>go run main.go</code>), you should see the HTML dumped to the terminal.</p>
 <h2 id="parse-the-html-using-goquery">Parse the HTML using Goquery</h2>
-
 <p>Web scraping is a <a href="https://www.youtube.com/watch?v=hHW1oY26kxQ"><code>R E L A X I N G</code></a> activity. A typical web scraping <em>sesh</em> involves going through the web page&rsquo;s source, <em>identifying</em> the HTML tags which are wrapped around the data you want, <em>coding</em> your parser to find those tags, and running the code. If it works, great! In practice however, you will be repeating this process over and over again until you get what you want (this is why I mentioned the Makefile earlier in this post). Good thing for you that I&rsquo;ll be telling you where to look!</p>
-
 <p>On the Pitchfork 500 page, right click and select &ldquo;View Page Source&rdquo;. On the wiki page, we want to grab the listed tracks. In the source, we should try to find where this content lies. A picture is given below showing the tracks on the page (left) and where they are in the source (right).</p>
-
-<p><center><img src="/post/images/go_web_scrapper/page_html.png" alt="drawing" width="1000"/></center></p>
-
+<!-- raw HTML omitted -->
 <p>In the wiki page, we see that the tracks are listed by years. In the HTML, we see that they are identified by the <code>&lt;div class=&quot;div-col ...&quot;&gt;</code> tags. Within these sections, the tracks are wrapped in <code>&lt;li&gt;</code> tags. Our parser should first find all the sections which are wrapped in the <code>div-col</code> tags, then iterate through every <code>&lt;li&gt;</code> element, extracting the track from them.</p>
-
 <p>We will modify our <code>MakeRequest()</code> method to parse through the HTML code using Goquery and return to us the tracks in a special type of array called a <a href="https://gobyexample.com/arrays">slice</a>. This new modified method looks like this:</p>
-
-<pre><code>func ParseWiki(url string) []string {
+<pre tabindex="0"><code>func ParseWiki(url string) []string {
         // Make Get request to a url
         resp, _ := http.Get(url)
 
@@ -269,20 +220,20 @@ func main() {
         var tracks []string
         var track string
 
-        tracks = append(tracks, &quot;artist,song\n&quot;)
+        tracks = append(tracks, &#34;artist,song\n&#34;)
 
         // Find all songs on page and parse string into artist and song
-        doc.Find(&quot;.div-col&quot;).Each(func(_ int, s *goquery.Selection) {
-                s.Find(&quot;li&quot;).Each(func(_ int, t *goquery.Selection) {
-                        // Split string by &quot;-&quot; to separate artist and track
-                        text := strings.Split(t.Text(), &quot; –&quot;)
+        doc.Find(&#34;.div-col&#34;).Each(func(_ int, s *goquery.Selection) {
+                s.Find(&#34;li&#34;).Each(func(_ int, t *goquery.Selection) {
+                        // Split string by &#34;-&#34; to separate artist and track
+                        text := strings.Split(t.Text(), &#34; –&#34;)
 
                         // Grab the artist and song
                         artist := text[0]
-                        song := strings.Trim(text[1], &quot; \&quot;&quot;)
+                        song := strings.Trim(text[1], &#34; \&#34;&#34;)
 
                         // Create track
-                        track = artist + &quot;,&quot; + song + &quot;\n&quot;
+                        track = artist + &#34;,&#34; + song + &#34;\n&#34;
 
                         tracks = append(tracks, track)
                 })
@@ -290,24 +241,17 @@ func main() {
 
         return tracks
 }
-</code></pre>
-
-<p>Now that our method parses HTML and returns the tracks, it&rsquo;s best practice to rename it to <code>ParseWiki()</code>. The first few lines are what we had in the original function, but now we put the request into the <code>NewDocumentFromReader()</code> method in Goquery. The <code>doc</code> object is something we can now manipulate to find and extract the data we want.</p>
-
+</code></pre><p>Now that our method parses HTML and returns the tracks, it&rsquo;s best practice to rename it to <code>ParseWiki()</code>. The first few lines are what we had in the original function, but now we put the request into the <code>NewDocumentFromReader()</code> method in Goquery. The <code>doc</code> object is something we can now manipulate to find and extract the data we want.</p>
 <p>In <code>doc</code>, we first find all <code>.div-col</code> objects which are the sections which hold our tracks. For each section, we iterate trough all <code>li</code> tags which contain our track names. We grab the text from those tags and parse the artist and track name using the <a href="https://golang.org/pkg/strings/">strings</a> library.</p>
-
-<p>In the code snippet above, some lines might seem strange. Some heuristics and assumptions are added about the text, in particular splitting the tracks by &ldquo; -&rdquo; instead of &ldquo;-&rdquo; and trimming &ldquo; \&ldquo;&rsquo;s (e.g. <code>strings.Split(t.Text(), &quot; –&quot;)</code> and <code>strings.Trim(text[1], &quot; \&quot;&quot;)</code> respectively). This is the nature of scraping - we repeatedly change our code until we get the data that we want in the format we want.</p>
-
+<p>In the code snippet above, some lines might seem strange. Some heuristics and assumptions are added about the text, in particular splitting the tracks by &quot; -&quot; instead of &ldquo;-&rdquo; and trimming &quot; &quot;&rsquo;s (e.g. <code>strings.Split(t.Text(), &quot; –&quot;)</code> and <code>strings.Trim(text[1], &quot; \&quot;&quot;)</code> respectively). This is the nature of scraping - we repeatedly change our code until we get the data that we want in the format we want.</p>
 <h2 id="save-the-data-in-csv-format">Save the data in CSV format</h2>
-
 <p>Now that we have the tracks, it&rsquo;s time to save them to a CSV file. Let&rsquo;s modify our <code>main()</code> function by creating the CSV file, iterating through the track slice and writing the track to the file.</p>
-
-<pre><code>func main() {
+<pre tabindex="0"><code>func main() {
         // The Pitchfork 500 wiki page url
-        url := &quot;https://en.wikipedia.org/wiki/The_Pitchfork_500&quot;
+        url := &#34;https://en.wikipedia.org/wiki/The_Pitchfork_500&#34;
 
         // Output filename
-        out_filename := &quot;tracks.csv&quot;
+        out_filename := &#34;tracks.csv&#34;
 
         // Grab the tracks from the parser
         tracks := ParseWiki(url)
@@ -330,21 +274,17 @@ func main() {
                 file.Sync()
         }
 }
-</code></pre>
-
-<h2 id="put-it-all-together">Put it all together</h2>
-
+</code></pre><h2 id="put-it-all-together">Put it all together</h2>
 <p>Putting everything together, we should have something like this:</p>
-
-<pre><code>package main
+<pre tabindex="0"><code>package main
 
 import (
-        &quot;github.com/PuerkitoBio/goquery&quot;
-        &quot;io&quot;
-        &quot;log&quot;
-        &quot;net/http&quot;
-        &quot;os&quot;
-        &quot;strings&quot;
+        &#34;github.com/PuerkitoBio/goquery&#34;
+        &#34;io&#34;
+        &#34;log&#34;
+        &#34;net/http&#34;
+        &#34;os&#34;
+        &#34;strings&#34;
 )
 
 func ParseWiki(url string) []string {
@@ -361,20 +301,20 @@ func ParseWiki(url string) []string {
         var tracks []string
         var track string
 
-        tracks = append(tracks, &quot;artist,song\n&quot;)
+        tracks = append(tracks, &#34;artist,song\n&#34;)
 
         // Find all songs on page and parse string into artist and song
-        doc.Find(&quot;.div-col&quot;).Each(func(_ int, s *goquery.Selection) {
-                s.Find(&quot;li&quot;).Each(func(_ int, t *goquery.Selection) {
-                        // Split string by &quot;-&quot; to separate artist and track
-                        text := strings.Split(t.Text(), &quot; –&quot;)
+        doc.Find(&#34;.div-col&#34;).Each(func(_ int, s *goquery.Selection) {
+                s.Find(&#34;li&#34;).Each(func(_ int, t *goquery.Selection) {
+                        // Split string by &#34;-&#34; to separate artist and track
+                        text := strings.Split(t.Text(), &#34; –&#34;)
 
                         // Grab the artist and song
                         artist := text[0]
-                        song := strings.Trim(text[1], &quot; \&quot;&quot;)
+                        song := strings.Trim(text[1], &#34; \&#34;&#34;)
 
                         // Create track
-                        track = artist + &quot;,&quot; + song + &quot;\n&quot;
+                        track = artist + &#34;,&#34; + song + &#34;\n&#34;
 
                         tracks = append(tracks, track)
                 })
@@ -385,10 +325,10 @@ func ParseWiki(url string) []string {
 
 func main() {
         // The Pitchfork 500 wiki page url
-        url := &quot;https://en.wikipedia.org/wiki/The_Pitchfork_500&quot;
+        url := &#34;https://en.wikipedia.org/wiki/The_Pitchfork_500&#34;
 
         // Output filename
-        out_filename := &quot;tracks.csv&quot;
+        out_filename := &#34;tracks.csv&#34;
 
         // Grab the tracks from the parser
         tracks := ParseWiki(url)
@@ -411,20 +351,12 @@ func main() {
                 file.Sync()
         }
 }
-</code></pre>
-
-<h2 id="final-thoughts">Final thoughts</h2>
-
+</code></pre><h2 id="final-thoughts">Final thoughts</h2>
 <p>Go is a <em>cool</em>, <em>fun</em> and <em>powerful</em> language. As someone who doesn&rsquo;t use <a href="https://en.wikipedia.org/wiki/Low-level_programming_language">low-level programming languages</a> a whole lot, Go seems to be a good entry point as it has abstractions when you just want to get something up and running, but allows for more control when you want it. <a href="https://github.com/dtcrout/pitchfork-500-scraper">Fork this code</a> and modify it to scrape other sites! In the future I hope to create more apps using Go as an alternative to Python. Until then, let me know what you think and if this was helpful!</p>
-
-<hr />
-
+<hr>
 <p>[1] That was a mouthful.</p>
-
 <p>[2] That sounds like a dope post&hellip; Stay tuned.</p>
-
 <p>[3] After all, the only programming I knew of was MATLAB.</p>
-
 <p>[4] In practice, you should be!</p>
 
       </article>
@@ -438,31 +370,10 @@ func main() {
 
   </section>
 
-  <article itemprop="articleBody" id="content" class="w-90 lh-copy">
-    <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'http-darshancrout-ai';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-  </article>
-
   <footer>
     <div>
       <p class="f6 gray mt6 lh-copy">
-        © 2021 Darshan Crout (<a href='https://twitter.com/durshmallow'>@durshmallow</a>). All rights reserved.
+        © 2022 Darshan Crout (<a href='https://twitter.com/durshmallow'>@durshmallow</a>). All rights reserved.
       </p>
     </div>
   </footer>
@@ -472,7 +383,6 @@ func main() {
 <script>
   hljs.initHighlightingOnLoad();
 </script>
-
 
 
 
